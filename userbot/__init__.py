@@ -101,9 +101,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/vckyou/E404NF-UserBot.git")
+    "https://github.com/vckyou/FromVT-Ubot.git")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "E404NF")
+    "UPSTREAM_REPO_BRANCH", "FromVT-Ubot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -147,7 +147,7 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 # Youtube API key
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
-# untuk perintah .lord
+# untuk perintah .error
 ERROR_TEKS_KUSTOM = os.environ.get("ERROR_TEKS_KUSTOM", None)
 
 # Default .alive name
@@ -349,7 +349,7 @@ def paginate_help(page_number, loaded_modules, prefix):
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
-        custom.Button.inline("{} {} ☫".format("☫", x), data="ub_modul_{}".format(x))
+        custom.Button.inline("{} {}".format("⚠️", x), data="ub_modul_{}".format(x))
         for x in helpable_modules
     ]
     pairs = list(zip(modules[::number_of_cols],
@@ -390,9 +390,9 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("E404NF-Userbot, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/vckyou/E404NF-UserBot.git)")
+                await event.reply("FromVT-Ubot, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/vckyou/FromVT-Ubot.git)")
             else:
-                await event.reply(f"`Hai Lord {ALIVE_NAME}\n\nApa Kabarmu?`")
+                await event.reply(f"`Hallo {ALIVE_NAME}\n\nApa Kabarmu?`")
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
@@ -403,8 +403,8 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n\n**❃ Jumlah Modul Yang Tersedia:** `{}`\n               \n**❃ Daftar Modul Lord Userbot:** \n".format(
-                        "**☫ E404NF-Userbot**",
+                    text="{}\n\n**⚠️ Jumlah Modul Yang Tersedia:** `{}`\n               \n**⚠️ Daftar Modul FromVT-Ubot:** \n".format(
+                        "**FromVT-Ubot ⚠️**",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -419,12 +419,12 @@ with bot:
             else:
                 result = builder.article(
                     "**E404NF-Userbot**",
-                    text="""**Anda Bisa Membuat Lord Userbot Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
+                    text="""**Anda Bisa Membuat FromVT-Ubot Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "Repo E404NF-Userbot",
-                                "https://github.com/vckyou/E404NF-Userbot"),
+                                "Repo **FromVT-UserBot",
+                                "https://github.com/vckyou/FromVT-Ubot"),
                             custom.Button.url(
                                 "Pemilik Repo",
                                 "t.me/Vckyouuu")],
@@ -465,7 +465,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Harap Deploy E404NF Userbot Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy FromVT Userbot Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -496,7 +496,7 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert = f"Harap Deploy E404NF Userbot Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} "
+                reply_pop_up_alert = f"Harap Deploy FromVT Userbot Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} "
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
