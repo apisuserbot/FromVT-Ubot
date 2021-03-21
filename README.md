@@ -38,7 +38,7 @@ Repo Yang Dibuat [Vckyou](https://t.me/Vckyouuu) Dari Berbagai Repo Userbot Gith
 Atau Bisa Gabung Ke Grup Lord Userbot -> [TEKAN DISINI](https://t.me/LordUserbot_Group)
 ## <p align="center">DEPLOY E404NF UserBot</p>
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/FromVT-Ubot.git"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-magenta?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/FromVT-Ubot.git"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-magenta?style=flat&logo=heroku" width="310" height="50.95" /></a></p>
 
 <br>
 </p>
