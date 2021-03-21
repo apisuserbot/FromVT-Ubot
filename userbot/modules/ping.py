@@ -93,14 +93,87 @@ async def pingme(pong):
     await pong.edit("**PING!!!**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"═══════════════\n"
-                    f"        **⚠️ 𝐄 𝐑 𝐑 𝐎 𝐑 ⚠️**\n"
-                    f"═══════════════\n"
-                    f"**➥ ᴘɪɴɢ   :** "
+    await pong.edit(f"═════════════════\n"
+                    f"      **⚠️ 𝙁 𝙍 𝙊 𝙈  𝙑 𝙏 ⚠️**\n"
+                    f"═════════════════\n"
+                    f"**❖ ᴘɪɴɢ    :** "
                     f"`%sms` \n"
                     f"**• ᴏɴʟɪɴᴇ  :** "
                     f"`{uptime}` \n"
                     f"**• ᴏᴡɴᴇʀ  :** `{ALIVE_NAME}`" % (duration))
+
+
+
+# Copyright (C) 2019 The Raphielscape Company LLC.
+#
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
+# you may not use this file except in compliance with the License.
+#
+""" Userbot module containing commands related to the \
+    Information Superhighway (yes, Internet). """
+
+from datetime import datetime
+
+from speedtest import Speedtest
+from userbot import CMD_HELP, StartTime, ALIVE_NAME
+from userbot.events import register
+import time
+
+
+async def get_readable_time(seconds: int) -> str:
+    count = 0
+    up_time = ""
+    time_list = []
+    time_suffix_list = ["Dtk", "Mnt", "Jam", "Hari"]
+
+    while count < 4:
+        count += 1
+        remainder, result = divmod(
+            seconds, 60) if count < 3 else divmod(
+            seconds, 24)
+        if seconds == 0 and remainder == 0:
+            break
+        time_list.append(int(result))
+        seconds = int(remainder)
+
+    for x in range(len(time_list)):
+        time_list[x] = str(time_list[x]) + time_suffix_list[x]
+    if len(time_list) == 4:
+        up_time += time_list.pop() + ", "
+
+    time_list.reverse()
+    up_time += ":".join(time_list)
+
+    return up_time
+
+
+@register(outgoing=True, pattern="^.xping$")
+async def pingme(pong):
+    """ For .ping command, ping the userbot from any chat.  """
+    await get_readable_time((time.time() - StartTime))
+    start = datetime.now()
+    await pong.edit("⚠️ 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
+    await pong.edit(" ⚠️𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁⚠️𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍⚠️𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊⚠️-𝙑𝙏 𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊𝙈⚠️𝙑𝙏 𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊𝙈-⚠️𝙏 𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑⚠️ 𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏⚠️𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 ⚠️𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽⚠️𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊⚠️")
+    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏⚠️")
+    await pong.edit("**𝙁𝙍𝙊𝙈-𝙑𝙏 𝙋𝙄𝙉𝙂⚠️**")
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
+    await pong.edit(f"⚠️𝙁𝙍𝙊𝙈-𝙑𝙏⚠️ \n"
+                    f"━━━━━━━━━━━━━━\n"
+                    f"➥ **Sinyal  :**"
+                    f" %sms \n"
+                    f"➥ **Owner :**"
+                    f" {ALIVE_NAME} \n" % (duration))
 
 
 @register(outgoing=True, pattern="^.spong$")
@@ -128,7 +201,7 @@ async def pingme(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**═══════════════**\n"
-                    f"**        ⚠️ 𝙀 𝙍 𝙍 𝙊 𝙍 ⚠️**\n"
+                    f"**      ⚠️ 𝙁 𝙍 𝙊 𝙈 - 𝙑 𝙏 ⚠️**\n"
                     f"**═══════════════**\n"
                     f"**➾ ᴘɪɴɢ**   : "
                     f"`%sms` \n"
@@ -151,8 +224,8 @@ async def pingme(pong):
     await pong.edit("**100% ██████████**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"⚠️ 𝐄𝐑𝐑𝐎𝐑 𝟒𝟎𝟒 𝐍𝐎𝐓𝐅𝐎𝐔𝐍𝐃 ⚠️\n"
-                    f"**▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬**\n"
+    await pong.edit(f"⚠️ 𝙁𝙍𝙊𝙈-𝙑𝙏 ⚠️\n"
+                    f"**▬▬▬▬▬▬▬▬**\n"
                     f"**• 𝚂𝚒𝚗𝚢𝚊𝚕  :** "
                     f"`%sms` \n"
                     f"**• 𝙾𝚗𝚕𝚒𝚗𝚎  :** "
