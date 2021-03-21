@@ -103,7 +103,6 @@ async def pingme(pong):
                     f"**• ᴏᴡɴᴇʀ  :** `{ALIVE_NAME}`" % (duration))
 
 
-
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
@@ -111,13 +110,6 @@ async def pingme(pong):
 #
 """ Userbot module containing commands related to the \
     Information Superhighway (yes, Internet). """
-
-from datetime import datetime
-
-from speedtest import Speedtest
-from userbot import CMD_HELP, StartTime, ALIVE_NAME
-from userbot.events import register
-import time
 
 
 async def get_readable_time(seconds: int) -> str:
