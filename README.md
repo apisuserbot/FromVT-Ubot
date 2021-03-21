@@ -1,15 +1,15 @@
 
   </a>
-  <a href="https://github.com/vckyou/E404NF-UserBot">
+  <a href="https://github.com/vckyou/FromVT-Ubot">
     <img src="https://telegra.ph/file/224ffaf09012f7bbea8dd.jpg">
     
   </a>
-  <a href="https://github.com/vckyou/E404NF-UserBot">
-    <img src="https://img.shields.io/github/stars/vckyou/E404NF-UserBot?style=social">
+  <a href="https://github.com/vckyou/FromVT-Ubot">
+    <img src="https://img.shields.io/github/stars/vckyou/FromVT-Ubot?style=social">
   </a>
 </p>  
 
-# Lord Userbot
+# FromVT-Ubot
 ![ERROR 404 NOT FOUND LOGO](https://telegra.ph/file/85f844efabbb7daa3af02.jpg)
 
 <h3 align="center">Userbot Yang Digunakan Untuk Bersenang-Senang Di Telegram</h3>
@@ -38,7 +38,7 @@ Repo Yang Dibuat [Vckyou](https://t.me/Vckyouuu) Dari Berbagai Repo Userbot Gith
 Atau Bisa Gabung Ke Grup Lord Userbot -> [TEKAN DISINI](https://t.me/LordUserbot_Group)
 ## <p align="center">DEPLOY E404NF UserBot</p>
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/E404NF-UserBot.git"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-magenta?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/FromVT-Ubot.git"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-magenta?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
 <br>
 </p>
