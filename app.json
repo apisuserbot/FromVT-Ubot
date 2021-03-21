@@ -51,7 +51,7 @@
     },
     "QUOTES_API_TOKEN": {
       "description": "Dapatkan Token Dari http://antiddos.systems",
-      "value": "33273f18-4a0d-4a76-8d78-a16faa002375"
+      "value": "33273f18-4a0d-4a76-8d78-a16faa002375",
       "required": false
     },
     "GENIUS_ACCESS_TOKEN": {
@@ -95,17 +95,17 @@
     },
     "YOUTUBE_API_KEY": {
       "description": "YouTube Data API Key for .yt command. Get from https://console.cloud.google.com",
-      "value": "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
+      "value": "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg",
       "required": false
     },
     "OCR_SPACE_API_KEY": {
       "description": "OCR API Key for .ocr command. Get from https://ocr.space/ocrapi",
-      "value": "0c2078b99188957"
+      "value": "0c2078b99188957",
       "required": false
     },
     "REM_BG_API_KEY": {
       "description": "API Key for .rbg command. Get from https://www.remove.bg/api",
-      "value": "GPLyodhzj3uY2fnJbSsnKek8"
+      "value": "GPLyodhzj3uY2fnJbSsnKek8",
       "required": false
     },
     "ANTI_SPAMBOT": {
@@ -212,7 +212,7 @@
     },
     "DEEZER_ARL_TOKEN": {
       "description": "Input your DEEZER ARL TOKEN https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken",
-      "value": "77d44120b28295ab132c9d2cddb0f4fad5515dc2d151a819bdfaef4cadc4464be31fbed7d1335fafe494e77b209a14a02d3e4bad6c428834698ea513202f76119892b578e3162af953d88a4539a463516156381d75be4e3f4b8cf0ead178e19c"
+      "value": "77d44120b28295ab132c9d2cddb0f4fad5515dc2d151a819bdfaef4cadc4464be31fbed7d1335fafe494e77b209a14a02d3e4bad6c428834698ea513202f76119892b578e3162af953d88a4539a463516156381d75be4e3f4b8cf0ead178e19c",
       "required": true
     },
     "UPSTREAM_REPO_URL": {
