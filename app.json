@@ -1,6 +1,6 @@
 {
-  "name": "E404NF-UserBot",
-  "description": "[E404NF-UserBot] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "name": "FromVT-Ubot",
+  "description": "[FromVT-Ubot] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
   "logo": "https://telegra.ph/file/85f844efabbb7daa3af02.jpg",
   "keywords": [
     "telegram",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/vckyou/E404NF-UserBot",
+  "repository": "https://github.com/vckyou/FromVT-Ubot",
   "telegram": "https://t.me/Vckyouuu",
   "success_url": "https://t.me/VckyouuBitch",
   "stack": "container",
@@ -51,6 +51,7 @@
     },
     "QUOTES_API_TOKEN": {
       "description": "Dapatkan Token Dari http://antiddos.systems",
+      "value": "33273f18-4a0d-4a76-8d78-a16faa002375"
       "required": false
     },
     "GENIUS_ACCESS_TOKEN": {
@@ -94,14 +95,17 @@
     },
     "YOUTUBE_API_KEY": {
       "description": "YouTube Data API Key for .yt command. Get from https://console.cloud.google.com",
+      "value": "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
       "required": false
     },
     "OCR_SPACE_API_KEY": {
       "description": "OCR API Key for .ocr command. Get from https://ocr.space/ocrapi",
+      "value": "0c2078b99188957"
       "required": false
     },
     "REM_BG_API_KEY": {
       "description": "API Key for .rbg command. Get from https://www.remove.bg/api",
+      "value": "GPLyodhzj3uY2fnJbSsnKek8"
       "required": false
     },
     "ANTI_SPAMBOT": {
@@ -151,7 +155,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
-      "value": "Error404NotFound",
+      "value": "NotFound",
       "required": false
     },
     "ALIVE_NAME": {
@@ -168,7 +172,7 @@
     },
     "G_BAN_LOGGER_GROUP": {
       "description": "Buatlah Sebuah Grup Private/Public Lalu Masukkan Bot Rose Lalu Ketik /id.",
-      "value": "Isi id grup mu",
+      "value": "Isi Id Grup Mu Contoh -52847823",
       "required": false
     },
     "G_DRIVE_DATA": {
@@ -198,7 +202,7 @@
     },
     "WEATHER_DEFCITY": {
       "description": "Set the default city for the userbot's weather module.",
-      "value": "Batam",
+      "value": "Isi Kota Mu",
       "required": false
     },
     "LOGSPAMMER": {
@@ -208,7 +212,8 @@
     },
     "DEEZER_ARL_TOKEN": {
       "description": "Input your DEEZER ARL TOKEN https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken",
-      "required": false
+      "value": "77d44120b28295ab132c9d2cddb0f4fad5515dc2d151a819bdfaef4cadc4464be31fbed7d1335fafe494e77b209a14a02d3e4bad6c428834698ea513202f76119892b578e3162af953d88a4539a463516156381d75be4e3f4b8cf0ead178e19c"
+      "required": true
     },
     "UPSTREAM_REPO_URL": {
       "description": "In case you maintain a fork, add your repo URL here.",
