@@ -86,6 +86,7 @@
     },
     "OPEN_WEATHER_MAP_APPID": {
       "description": "Get your own APPID (API key)from https://api.openweathermap.org/data/2.5/weather",
+      "value": "b84d0dea12baa6acf6c22f41cea472b5",
       "required": false
     },
     "PM_AUTO_BAN": {
