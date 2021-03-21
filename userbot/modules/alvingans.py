@@ -265,6 +265,24 @@ async def typewriter(typew):
                      "╨━━┗┛┗┛━━┗┛┗┛━━┻\n")
 
 
+@register(outgoing=True, pattern='^.ass(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**DI GULUNG-GULUNG**")
+    sleep(2)
+    await typew.edit("**DIKUNYAH-KUNYAH**")
+    sleep(2)
+    await typew.edit("**Assalamualaikum Semua Nya🙏**")
+
+
+@register(outgoing=True, pattern='^.wbb(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**Wah Parah Banget Lu Bro**")
+    sleep(2)
+    await typew.edit("**Waalaikumsalam Wr. wb.🙏**")
+
+
 @register(outgoing=True, pattern='^.bernyanyi(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
