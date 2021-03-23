@@ -251,7 +251,7 @@ async def afk_on_pm(sender):
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"**𝙼𝚊𝚊𝚏 𝚂𝚊𝚢𝚊 𝚂𝚎𝚍𝚊𝚗𝚐 𝙰𝙵𝙺!** {afk_since} **Yang Lalu.**\
+                        await sender.reply(f"**𝙼𝚊𝚊𝚏 𝚂𝚊𝚢𝚊 𝚂𝚎𝚍𝚊𝚗𝚐 𝙰𝙵𝙺!** `{afk_since}` **Yang Lalu.**\
                             \n➽ 𝗔𝗹𝗮𝘀𝗮𝗻 : `{AFKREASON}`")
                     else:
                         await sender.reply(str(choice(AFKSTR)))
