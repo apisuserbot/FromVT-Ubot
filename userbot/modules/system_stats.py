@@ -305,9 +305,9 @@ async def amireallyalive(alive):
         f"➨ `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
         f"➨ `Bot Ver  :`{BOT_VER} \n"
         f"➨ `Modules  :`{len(modules)} Modules \n\n"
-        f"💻 **DEPLOYED**  : [**KLIK DISINI**](https://github.com/vckyou/FromVT-Ubot)\n"
-        f"⚠️ **GROUP**         : [**KLIK DISINI**](https://t.me/LordUserBot_Group)\n"
-        f"👑 **OWNER**        : [**KLIK DISINI**](t.me/Vckyouuu)\n"
+        f"💻 **DEPLOYED**  : [𝗞𝗟𝗜𝗞 𝗗𝗜𝗦𝗜𝗡𝗜](https://github.com/vckyou/FromVT-Ubot)\n"
+        f"⚠️ **GROUP**         : [𝗞𝗟𝗜𝗞 𝗗𝗜𝗦𝗜𝗡𝗜](https://t.me/LordUserBot_Group)\n"
+        f"👑 **OWNER**        : [𝗞𝗟𝗜𝗞 𝗗𝗜𝗦𝗜𝗡𝗜](t.me/Vckyouuu)\n"
         f" ▬▬▬▬▬▬❙┗─☫─┛❙▬▬▬▬▬▬")
     if ALIVE_LOGO:
         try:
