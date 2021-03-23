@@ -307,7 +307,7 @@ async def amireallyalive(alive):
         f"➨ `Modules  :`{len(modules)} Modules \n\n"
         f"💻 **DEPLOYED**  : [**KLIK DISINI**](https://github.com/vckyou/FromVT-Ubot)\n"
         f"⚠️ **GROUP**     : [**KLIK DISINI**](https://t.me/LordUserBot_Group)\n"
-        f"👑 ** OWNER **: [**KLIK DISINI**](t.me/Vckyouuu)
+        f"👑 **OWNER**     : [**KLIK DISINI**](t.me/Vckyouuu)\n"
         f" ▬▬▬▬▬▬❙┗─☫─┛❙▬▬▬▬▬▬")
     if ALIVE_LOGO:
         try:
