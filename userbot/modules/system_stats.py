@@ -304,11 +304,11 @@ async def amireallyalive(alive):
         f"➨ `Python   :`Ver {python_version()} \n"
         f"➨ `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
         f"➨ `Bot Ver  :`{BOT_VER} \n"
-        f"➨ `Modules  :`{len(modules)} Modules \n"
-        f" ▬▬▬▬▬▬❙┗─☫─┛❙▬▬▬▬▬▬ \n\n"
+        f"➨ `Modules  :`{len(modules)} Modules \n\n"
         f"💻 **DEPLOYED**  : [**KLIK DISINI**](https://github.com/vckyou/FromVT-Ubot)\n"
         f"⚠️ **GROUP**     : [**KLIK DISINI**](https://t.me/LordUserBot_Group)\n"
-        f"👑 **OWNER**     : [**KLIK DISINI**](t.me/Vckyouuu)")
+        f"👑 **OWNER**     : [**KLIK DISINI**](t.me/Vckyouuu)
+        f" ▬▬▬▬▬▬❙┗─☫─┛❙▬▬▬▬▬▬")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
