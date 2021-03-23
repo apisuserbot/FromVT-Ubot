@@ -24,10 +24,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    f"⚡️𝙊𝙁𝙁𝙇𝙄𝙉𝙀\n╭┈──────────── \n➥ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰ\n╰┈─────────",
-    f"⚡️𝙊𝙁𝙁𝙇𝙄𝙉𝙀\n╭┈──────────── \n➥ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰ\n╰┈─────────",
-    f"⚡️𝙊𝙁𝙁𝙇𝙄𝙉𝙀\n╭┈──────────── \n➥ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰ\n╰┈─────────",
-    f"⚡️𝙊𝙁𝙁𝙇𝙄𝙉𝙀\n╭┈──────────── \n➥ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰ\n╰┈─────────",
+    f"🔥 𝘼 𝙁 𝙆\n╭╼════════╾╮ \n➥ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n╰╼════════╾╯",
+    f"🔥 𝘼 𝙁 𝙆\n╭╼════════╾╮ \n➥ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n╰╼════════╾╯",
+    f"🔥 𝘼 𝙁 𝙆\n╭╼════════╾╮ \n➥ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n╰╼════════╾╯",
+    f"🔥 𝘼 𝙁 𝙆\n╭╼════════╾╮ \n➥ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n╰╼════════╾╯",
 ]
 
 
@@ -62,9 +62,9 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"⚡️𝙊𝙁𝙁𝙇𝙄𝙉𝙀\n╭┈──────────── \n➥ {ALIVE_NAME} ᴏꜰꜰ ᴅᴜʟᴜ\n➥ ᴀʟᴀꜱᴀɴ : {AFKREASON}\n╰┈─────────")
+        await afk_e.edit(f"🔥 𝘼 𝙁 𝙆\n╭╼═══╾╼═══╾╼═══╾╼═══─ \n➥ {ALIVE_NAME} ᴏꜰꜰ ᴅᴜʟᴜ\n➥ ᴀʟᴀꜱᴀɴ : {AFKREASON}\n╰┈─────────")
     else:
-        await afk_e.edit("⚡️𝙊𝙁𝙁𝙇𝙄𝙉𝙀\n╭┈─────────────── \n➥ ᴊᴀɴɢᴀɴ ʀɪɴᴅᴜ, ʙᴇʀᴀᴛ\n╰┈─────────────")
+        await afk_e.edit("🔥 𝘼 𝙁 𝙆\n╭╼═══╾╼═══╾╼═══╾ \n➥ ᴊᴀɴɢᴀɴ ʀɪɴᴅᴜ, ʙᴇʀᴀᴛ\n╰┈─────────────")
     if user.last_name:
         await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name))
     else:
