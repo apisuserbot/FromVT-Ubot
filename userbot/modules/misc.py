@@ -119,45 +119,44 @@ async def repeat(rep):
 @register(outgoing=True, pattern="^.repo$")
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
-    await wannasee.edit(
-        "💎 **Repo Userbot :** [𝙁𝙧𝙤𝙢𝙑𝙏-𝙐𝙨𝙚𝙧𝘽𝙤𝙩](https://github.com/Vckyou/FromVT-Ubot)\n
+    await wannasee.edit("💎 **Repo Userbot: ** [𝙁𝙧𝙤𝙢𝙑𝙏 - 𝙐𝙨𝙚𝙧𝘽𝙤𝙩](https: // github.com / Vckyou / FromVT - Ubot)\n
         "👑 **Pemilik      :** [𝙑𝙘𝙠𝙮𝙮𝙮](t.me/Vckyouuu)")
     )
 
 
-@register(outgoing=True, pattern="^.raw$")
+@ register(outgoing = True, pattern = "^.raw$")
 async def raw(event):
-    the_real_message = None
-    reply_to_id = None
+    the_real_message=None
+    reply_to_id=None
     if event.reply_to_msg_id:
-        previous_message = await event.get_reply_message()
-        the_real_message = previous_message.stringify()
-        reply_to_id = event.reply_to_msg_id
+        previous_message=await event.get_reply_message()
+        the_real_message=previous_message.stringify()
+        reply_to_id=event.reply_to_msg_id
     else:
-        the_real_message = event.stringify()
-        reply_to_id = event.message.id
+        the_real_message=event.stringify()
+        reply_to_id=event.message.id
     with io.BytesIO(str.encode(the_real_message)) as out_file:
-        out_file.name = "raw_message_data.txt"
+        out_file.name="raw_message_data.txt"
         await event.edit(
             "`Check the userbot log for the decoded message data !!`")
         await event.client.send_file(
             BOTLOG_CHATID,
             out_file,
-            force_document=True,
-            allow_cache=False,
-            reply_to=reply_to_id,
-            caption="`Here's the decoded message data !!`")
+            force_document = True,
+            allow_cache = False,
+            reply_to = reply_to_id,
+            caption = "`Here's the decoded message data !!`")
 
 
-@register(outgoing=True, pattern=r"^.reverse(?: |$)(\d*)")
+@ register(outgoing = True, pattern = r"^.reverse(?: |$)(\d*)")
 async def okgoogle(img):
     """ For .reverse command, Google search images and stickers. """
     if os.path.isfile("okgoogle.png"):
         os.remove("okgoogle.png")
 
-    message = await img.get_reply_message()
+    message=await img.get_reply_message()
     if message and message.media:
-        photo = io.BytesIO()
+        photo=io.BytesIO()
         await bot.download_media(message, photo)
     else:
         await img.edit("`Harap Balas Di Gambar`")
@@ -166,16 +165,16 @@ async def okgoogle(img):
     if photo:
         await img.edit("`Processing...`")
         try:
-            image = Image.open(photo)
+            image=Image.open(photo)
         except OSError:
             await img.edit('`Gambar tidak di dukung`')
             return
-        name = "okgoogle.png"
+        name="okgoogle.png"
         image.save(name, "PNG")
         image.close()
         # https://stackoverflow.com/questions/23270175/google-reverse-image-search-using-post-request#28792943
-        searchUrl = 'https://www.google.com/searchbyimage/upload'
-        multipart = {
+        searchUrl='https://www.google.com/searchbyimage/upload'
+        multipart={
             'encoded_image': (name, open(name, 'rb')),
             'image_content': ''
         }
