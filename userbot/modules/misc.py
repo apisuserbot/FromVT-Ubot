@@ -119,9 +119,10 @@ async def repeat(rep):
 @register(outgoing=True, pattern="^.repo$")
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
-    await wannasee.edit("💎 **Repo Userbot: ** [𝙁𝙧𝙤𝙢𝙑𝙏 - 𝙐𝙨𝙚𝙧𝘽𝙤𝙩](https: // github.com / Vckyou / FromVT - Ubot)\n
-                        "👑 **Pemilik      :** [𝙑𝙘𝙠𝙮𝙮𝙮](t.me/Vckyouuu)"
-                        )
+    await wannasee.edit(
+        "💎 **Repo Userbot :** [𝙁𝙧𝙤𝙢𝙑𝙏-𝙐𝙨𝙚𝙧𝘽𝙤𝙩](https://github.com/Vckyou/FromVT-Ubot)\n
+        "👑 **Pemilik      :** [𝙑𝙘𝙠𝙮𝙮𝙮](t.me/Vckyouuu)")
+    )
 
 
 @register(outgoing=True, pattern="^.raw$")
@@ -159,7 +160,7 @@ async def okgoogle(img):
         photo = io.BytesIO()
         await bot.download_media(message, photo)
     else:
-        await img.edit("`Harap Balas Di Gambar Lord`")
+        await img.edit("`Harap Balas Di Gambar`")
         return
 
     if photo:
