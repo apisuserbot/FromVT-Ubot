@@ -94,9 +94,9 @@ async def pingme(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**═════════════════**\n"
-                    f"        **⚠️ 𝙁 𝙍 𝙊 𝙈 - 𝙑 𝙏 ⚠️**\n"
+                    f"       **⚠️ 𝙁 𝙍 𝙊 𝙈 - 𝙑 𝙏 ⚠️**\n"
                     f"**═════════════════**\n"
-                    f"**❖ ᴘɪɴɢ    :** "
+                    f"**❖ ᴘɪɴɢ   :** "
                     f"`%sms` \n"
                     f"**• ᴏɴʟɪɴᴇ  :** "
                     f"`{uptime}` \n"
@@ -157,7 +157,7 @@ async def pingme(pong):
     await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽⚠️𝙏**!**")
     await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊⚠️")
     await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏⚠️")
-    await pong.edit("**𝙁𝙍𝙊𝙈-𝙑𝙏 𝙋𝙄𝙉𝙂⚠️**")
+    await pong.edit("**𝙁𝙍𝙊𝙈-𝙑𝙏 𝙋𝙄𝙉𝙂!⚠️**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**⚠️𝙁𝙍𝙊𝙈-𝙑𝙏⚠️** \n"
@@ -193,7 +193,7 @@ async def pingme(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**═══════════════**\n"
-                    f"       **⚠️ 𝙁 𝙍 𝙊 𝙈 - 𝙑 𝙏 ⚠️**\n"
+                    f"     **⚠️ 𝙁 𝙍 𝙊 𝙈 - 𝙑 𝙏 ⚠️**\n"
                     f"**═══════════════**\n"
                     f"**➾ ᴘɪɴɢ**   : "
                     f"`%sms` \n"
