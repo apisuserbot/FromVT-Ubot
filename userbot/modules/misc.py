@@ -119,8 +119,7 @@ async def repeat(rep):
 @register(outgoing=True, pattern="^.repo$")
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
-    await wannasee.edit(
-        "💎 **Repo Userbot : **[𝙁𝙧𝙤𝙢𝙑𝙏-𝙐𝙨𝙚𝙧𝘽𝙤𝙩](https://github.com/Vckyou/FromVT-Ubot)\n
+    await wannasee.edit("💎 **Repo Userbot: **[𝙁𝙧𝙤𝙢𝙑𝙏 - 𝙐𝙨𝙚𝙧𝘽𝙤𝙩](https: // github.com / Vckyou / FromVT - Ubot)\n
         "👑 **Pemilik      :** [𝙑𝙘𝙠𝙮𝙮𝙮](t.me/Vckyouuu)")
     )
 
