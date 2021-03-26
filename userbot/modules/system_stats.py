@@ -226,15 +226,15 @@ async def amireallyalive(alive):
         f" **✯𝙁𝙍𝙊𝙈 𝙑𝙏 - 𝙐𝘽𝙊𝙏✯** \n"
         f"\n__**{ERROR_TEKS_KUSTOM}**__\n"
         f"**▰▱▰▱▰▱◆▱▰▱▰▱▰**\n"
-        f"     **⚠️ 𝙁𝙍𝙊𝙈-𝙑𝙏** \n"
+        f"              **⚠️ 𝙁𝙍𝙊𝙈-𝙑𝙏** \n"
         f" ➣ `{DEFAULTUSER}` \n"
         f"**☫ Username** \n"
         f" ➣ `@{user.username}` \n"
         f"╭━━━━━━━━━━━━━━━━━━╮\n"
-        f"┣⚠️ `Telethon :`Ver {version.__version__} \n"
-        f"┣⚠️ `Python   :`Ver {python_version()} \n"
-        f"┣⚠️ `Bot Ver  :`{BOT_VER} \n"
-        f"┣⚠️ `Modules  :`{len(modules)} \n"
+        f"┣❍ `Telethon :`Ver {version.__version__} \n"
+        f"┣❍ `Python   :`Ver {python_version()} \n"
+        f"┣❍ `Bot Ver  :`{BOT_VER} \n"
+        f"┣❍ `Modules  :`{len(modules)} \n"
         f"╰━━━━━━━━━━━━━━━━━━╯")
     if ALIVE_LOGO:
         try:
@@ -262,14 +262,14 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**▬▬▬▬▬▬❙┍─☫─┑❙▬▬▬▬▬▬**\n"
-        f"     **♕ 𝐄𝟒𝟎𝟒𝐍𝐅-𝐔𝐒𝐄𝐑𝐁𝐎𝐓 ♕** \n\n"
-        f"➽ **Name**     \n   ➥ `{DEFAULTUSER}` \n"
-        f"➽ **Username** \n   ➥ `@{user.username}` \n"
-        f"➽ **Telethon** \n   ➥ `Versi {version.__version__}` \n"
-        f"➽ **Python**   \n   ➥ `Versi {python_version()}` \n"
-        f"➽ **Versi Bot**\n   ➥ `{BOT_VER}` \n"
-        f"➽ **Modul**    \n   ➥ `{len(modules)}` \n\n"
-        f"➽ **Repo Userbot:** [FromVT;-Ubot](https://github.com/vckyou/FromVT-Ubot)\n⚠️ **Grup Userbot: **[Tekan](t.me/LordUserbot_Group)\n❃ **Pemilik:** [Vcky](t.me/Vckyouuu)\n"
+        f"     **♕ 𝙁𝙍𝙊𝙈 𝙑𝙏  -  𝙐𝘽𝙊𝙏 ♕** \n\n"
+        f"**❍ Name**     \n   ➥ `{DEFAULTUSER}` \n"
+        f"**❍ Username** \n   ➥ `@{user.username}` \n"
+        f"**❍ Telethon** \n   ➥ `Versi {version.__version__}` \n"
+        f"**❍ Python**   \n   ➥ `Versi {python_version()}` \n"
+        f"**❍ Versi Bot**\n   ➥ `{BOT_VER}` \n"
+        f"**❍ Modul**    \n   ➥ `{len(modules)}` \n\n"
+        f"**❍ Repo Userbot:** [FromVT;-Ubot](https://github.com/vckyou/FromVT-Ubot)\n⚠️ **Grup Userbot: **[Tekan](t.me/LordUserbot_Group)\n❃ **Pemilik:** [Vcky](t.me/Vckyouuu)\n"
         f"**▬▬▬▬▬▬❙┗─☫─┛❙▬▬▬▬▬▬**")
     if ALIVE_LOGO:
         try:
@@ -297,18 +297,17 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"   **⚠️ 𝙁𝙍𝙊𝙈 𝙑𝙏  -  𝙐𝘽𝙊𝙏 ⚠️**\n"
-        f" ▬▬▬▬▬▬❙┍─☫─┑❙▬▬▬▬▬▬ \n"
-        f"➥ `Name     :`{DEFAULTUSER} \n"
-        f"➨ `Username :`@{user.username} \n"
-        f"➨ `Telethon :`Ver {version.__version__} \n"
-        f"➨ `Python   :`Ver {python_version()} \n"
-        f"➨ `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
-        f"➨ `Bot Ver  :`{BOT_VER} \n"
-        f"➨ `Modules  :`{len(modules)} Modules \n\n"
-        f"💻 **DEPLOYED**  : [𝗞𝗟𝗜𝗞 𝗗𝗜𝗦𝗜𝗡𝗜](https://github.com/vckyou/FromVT-Ubot)\n"
-        f"⚠️ **GROUP**         : [𝗞𝗟𝗜𝗞 𝗗𝗜𝗦𝗜𝗡𝗜](https://t.me/LordUserBot_Group)\n"
-        f"👑 **OWNER**        : [𝗞𝗟𝗜𝗞 𝗗𝗜𝗦𝗜𝗡𝗜](t.me/Vckyouuu)\n"
-        f" ▬▬▬▬▬▬❙┗─☫─┛❙▬▬▬▬▬▬")
+        f"├╼═══╾╼═══╾╼╾╼═══╾╼═══╾╮ \n"
+        f"❍ `Name     :` {DEFAULTUSER} \n"
+        f"❍ `Username :` @{user.username} \n"
+        f"❍ `Telethon :` Ver {version.__version__} \n"
+        f"❍ `Python   :` Ver {python_version()} \n"
+        f"❍ `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
+        f"❍ `Bot Ver  :` {BOT_VER} \n"
+        f"❍ `Modules  :` {len(modules)} Modules \n\n"
+        f"╰╼═══╾╼═══╾╼╾╼═══╾╼═══╾╮ \n"
+        f"[𝗥𝗘𝗣𝗢](https://github.com/vckyou/FromVT-Ubot) | [𝗖𝗛𝗔𝗡𝗡𝗘𝗟](https://t.me/Vckyouuu) | [𝗣𝗘𝗠𝗜𝗟𝗜𝗞](t.me/Vckyouuu)\n"
+        f"╰╼════╾╼═══╾╼════╾┤
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
