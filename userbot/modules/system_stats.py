@@ -307,7 +307,7 @@ async def amireallyalive(alive):
         f"❍ `Modules  :` {len(modules)} Modules \n\n"
         f"╰╼═══╾╼═══╾╼╾╼═══╾╼═══╾╮ \n"
         f"[𝗥𝗘𝗣𝗢](https://github.com/vckyou/FromVT-Ubot) | [𝗖𝗛𝗔𝗡𝗡𝗘𝗟](https://t.me/Vckyouuu) | [𝗣𝗘𝗠𝗜𝗟𝗜𝗞](t.me/Vckyouuu)\n"
-        f"╰╼════╾╼═══╾╼════╾┤
+        f"╰╼════╾╼═══╾╼════╾┤")
     if ALIVE_LOGO:
         try:
             logo=ALIVE_LOGO
