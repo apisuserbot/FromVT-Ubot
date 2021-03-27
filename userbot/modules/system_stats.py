@@ -305,7 +305,7 @@ async def amireallyalive(alive):
         f"┣❍ `Python   :` Ver {python_version()} \n"
         f"┣❍ `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
         f"┣❍ `Bot Ver  :` {BOT_VER} \n"
-        f"┣❍ `Modules  :` {len(modules)} Modules \n\n"
+        f"┣❍ `Modules  :` {len(modules)} Modules \n"
         f"┣╼═══╾╼═══╾╼╾╼═══╾╼═══╾ \n"
         f"┣[𝗥𝗘𝗣𝗢](https://github.com/vckyou/FromVT-Ubot) | [𝗖𝗛𝗔𝗡𝗡𝗘𝗟](https://t.me/Vckyouuu) | [𝗣𝗘𝗠𝗜𝗟𝗜𝗞](t.me/Vckyouuu)\n"
         f"╰╼════╾╼═══╾╼═══╾╼════╾")
