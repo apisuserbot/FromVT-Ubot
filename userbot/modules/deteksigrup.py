@@ -58,6 +58,6 @@ def user_full_name(user):
 CMD_HELP.update({
     "deteksi":
         "`.dgrup`\
-        "`.dg`\
+        "`.dg`
     \nPenjelasan: Melihat Riwayat Grup Yang Pernah / Sedang dimasuki."
 })
