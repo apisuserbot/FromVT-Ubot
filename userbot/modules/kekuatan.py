@@ -130,7 +130,7 @@ async def _(fry):
 
 
 CMD_HELP.update({
-    "kekuatan":
+    "tumor":
     "`.tumor` or `.tumor` [level(1-8)]"
     "\nUsage: untuk mengubah foto/sticker."
 })
