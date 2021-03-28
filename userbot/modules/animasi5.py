@@ -44,7 +44,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 CMD_HELP.update({
-    "lord":
+    "animasi5":
     "`.lord`\
     \nUsage: alive bot.\
     \n\n`.sadboy`\
