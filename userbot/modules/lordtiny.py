@@ -1,10 +1,10 @@
-# Port By LiuAlvinas/Alvin For Lord Userbot From Ultroid, Thanks
+# Port By Vckyouuu/VickyAulia For FromVT-Userbot From Ultroid, Thanks
 # Based Plugins
 # Fixed By ManusiaRakitann/Koala
 # Dont Remove
 
 
-# Alvin Ganteng
+# Pikkiii
 
 from PIL import Image
 import cv2
@@ -12,18 +12,18 @@ import os
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
-# Ngapain Kesini Ajg Hus
+# Pergii Sanaaa Husss Dasar Anjg
 
 
 @register(outgoing=True, pattern="^.tiny(?: |$)(.*)", disable_errors=True)
 async def ultiny(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
-        await event.edit("`Lord, Mohon Balas Ke Sticker`")
+        await event.edit("`Mohon Reply Pesan Ini Ke Sticker`")
         return
-    xx = await event.edit("`Memproses Tiny....`")
+    xx = await event.edit("`Sedang Memprosess....`")
     ik = await bot.download_media(reply)
-    im1 = Image.open("LordUserbot/lorduserbot.png")
+    im1 = Image.open("resources/fromvt/fromvtubot.png")
     if ik.endswith(".tgs"):
         await event.client.download_media(reply, "ult.tgs")
         os.system("lottie_convert.py ult.tgs json.json")
@@ -87,8 +87,8 @@ async def ultiny(event):
     os.remove(file)
     os.remove(ik)
 
-# Port By Alvin Ganteng/liualvinas
-# Lord - Userbot
+# Port By Vicky/@Vickyouuu
+# FromVT - Userbot
 
 CMD_HELP.update({"tiny": "`.tiny`\
     \nPenjelasan: Untuk Memperkecil Sticker."})
