@@ -58,6 +58,28 @@ async def typewriter(typew):
                      "`\n💔<\\  *Terimakasih`")
 
 
+@register(outgoing=True, pattern='^.misi(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit(("`\n┻┳|―-∩`"
+                     "`\n┳┻|     ヽ`"
+                     "`\n┻┳|    ● |`"
+                     "`\n┳┻|▼) _ノ`"
+                     "`\n┻┳|￣  )`"
+                     "`\n┳ﾐ(￣ ／`"
+                     "`\n┻┳T￣|`"
+                     "\n**Permisii...**")
+    sleep(3)
+    await typew.edit(("`\n┻┳|―-∩`"
+                     "`\n┳┻|     ヽ`"
+                     "`\n┻┳|    ● |`"
+                     "`\n┳┻|▼) _ノ`"
+                     "`\n┻┳|￣  )`"
+                     "`\n┳ﾐ(￣ ／`"
+                     "`\n┻┳T￣|`"
+                     "\n**Apa Aku Bolehh Ikut Main?**")
+
+
 @bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 async def _(event):
 
@@ -187,5 +209,7 @@ CMD_HELP.update({
     \n\n`.hua`\
     \nUsage: nangis.\
     \n\n`.ceritacinta` ; `.canda`\
-    \nUsage: liat sendiri"
+    \nUsage: liat sendiri`\
+    \n\n`.misi`\
+    \nUsage: permisii."
 })
