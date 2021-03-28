@@ -6,18 +6,20 @@
 
 from PIL import Image
 
+import cv2
 import os
 from userbot.events import register
 from userbot import CMD_HELP, bot
+from PIL import Image
 
 
-@register(outgoing=True, pattern=r"^\.tiny(?: |$)(.*)")
-async def _(event):
+@register(outgoing=True, pattern=r"^.tiny(?: |$)(.*)"), disable_errors=True)
+async def ultiny_(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
-        await event.edit("`Mohon Balas Ke Sticker Lord`")
+        await event.edit("`Tolong Reply Ke Sticker!`")
         return
-    xx = await event.edit("`Memproses...`")
+    xx = await event.edit("`Sedang Memproses...`")
     ik = await bot.download_media(reply_message.media)
     im1 = Image.open("resources/fromvt/fromvtubot.png")
     if ik.endswith(".tgs"):
@@ -83,8 +85,11 @@ async def _(event):
     os.remove(file)
     os.remove(ik)
 
-# Port By Alvin Ganteng/liualvinas
-# Lord - Userbot
+# Port By Vicky/Vckyouuu
+# Vcky Gans
 
-CMD_HELP.update({"tiny": "`.tiny`\
-    \nPenjelasan: Untuk Memperkecil Sticker."})
+CMD_HELP.update(
+    {
+        "tiny": ".tiny\
+    \nTiny tiny lapyuuuu."
+    })
