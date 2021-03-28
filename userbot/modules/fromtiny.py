@@ -1,6 +1,6 @@
 # Port By Vckyouuu For FromVT-UserBot From Ulttoid
 # Based Plugins
-# Dont Remove
+# Jangan Dihapus!!!
 # Vcky Ganteng
 
 import cv2
