@@ -1,10 +1,7 @@
 # Port By Vckyouuu For FromVT-UserBot From Ulttoid
 # Based Plugins
 # Dont Remove
-
 # Vcky Ganteng
-
-from PIL import Image
 
 import cv2
 import os
