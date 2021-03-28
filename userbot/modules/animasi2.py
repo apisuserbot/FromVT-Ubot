@@ -98,7 +98,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^.bundir(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Dadah Semuanya...`          \n　　　　　|"
+    await typew.edit("`Selamat Tinggal Kalian Semua`          \n　　　　　|"
                      "\n　　　　　| \n"
                      "　　　　　| \n"
                      "　　　　　| \n"
@@ -111,17 +111,18 @@ async def typewriter(typew):
                      "　|　３　 | 丶＼ \n"
                      "＜ 、･　　|　　＼ \n"
                      "　＼＿＿／∪ _ ∪) \n"
-                     "　　　　　 Ｕ Ｕ\n")
+                     "　　　　　 Ｕ Ｕ\n"
+                     "`Gantung Diri Akibat Kena Ghosting`")
 
 
-@register(outgoing=True, pattern='^.awkwok(?: |$)(.*)')
+@register(outgoing=True, pattern='^.wkwk(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("────██──────▀▀▀██\n"
                      "──▄▀█▄▄▄─────▄▀█▄▄▄\n"
                      "▄▀──█▄▄──────█─█▄▄\n"
                      "─▄▄▄▀──▀▄───▄▄▄▀──▀▄\n"
-                     "─▀───────▀▀─▀───────▀▀\n`Awkwokwokwok..`")
+                     "─▀───────▀▀─▀───────▀▀\n`Wahahahaha Ngakakk Abieezzzzz`")
 
 
 @register(outgoing=True, pattern='^.ular(?: |$)(.*)')
@@ -320,14 +321,14 @@ async def typewriter(typew):
 
 
 CMD_HELP.update({
-    "vip":
+    "animasi2":
     "`.bulan` ; `.hati` ; `.bernyanyi`\
     \nUsage: liat aja.\
     \n\n`.helikopter` ; `.tank` ; `.tembak`\n`.bundir`\
     \nUsage: liat sendiri\
     \n\n`.y`\
     \nUsage: jempol\
-    \n\n`.awkwok`\
+    \n\n`.wkwk`\
     \nUsage: ketawa lari.\
     \n\n`.ular` ; `.babi` ; `.ajg`\
     \nUsage: liat sendiri."
