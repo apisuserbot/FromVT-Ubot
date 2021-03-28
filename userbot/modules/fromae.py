@@ -1,5 +1,6 @@
 # Based Plugins
-# Ported for Lord-Userbot By liualvinas/Alvin
+# Ported for FromVT-UserBot By liualvinas/Alvin
+# Vckyouuu/Vicky
 
 from telethon import events
 from userbot.events import register
