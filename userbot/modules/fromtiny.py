@@ -13,11 +13,11 @@ from PIL import Image
 async def ultiny(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
-        await event.edit("`Balas Ke Pesan COK`")
+        await event.edit("`Tolong Reply Ke Sticker.`")
         return
-    xx = await event.edit("`TinyTinyLopyu ❤️...`")
+    xx = await event.edit("`Sedang Memprosess...`")
     ik = await bot.download_media(reply)
-    im1 = Image.open("resources/extras/kampangbot.png")
+    im1 = Image.open("resources/fromvt/fromvtubot.png")
     if ik.endswith(".tgs"):
         await event.client.download_media(reply, "ult.tgs")
         os.system("lottie_convert.py ult.tgs json.json")
@@ -84,5 +84,5 @@ async def ultiny(event):
 CMD_HELP.update(
     {
         "tiny": ".tiny\
-    \nTiny tiny lapyuuuu."
+    \nMemperkecil Sticker."
     })
