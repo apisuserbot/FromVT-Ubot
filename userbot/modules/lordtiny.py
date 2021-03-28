@@ -19,7 +19,7 @@ async def _(event):
         return
     xx = await event.edit("`Memproses...`")
     ik = await bot.download_media(reply_message.media)
-    im1 = Image.open("LordUserBot/lorduserbot.png")
+    im1 = Image.open("resources/fromvt/fromvtubot.png")
     if ik.endswith(".tgs"):
         await bot.client.download_media(reply_message, "ult.tgs")
         os.system("lottie_convert.py ult.tgs json.json")
