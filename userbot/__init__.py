@@ -167,7 +167,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Lord-Userbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "FromVT-Ubot")
 
 # Bot version
 BOT_VER = os.environ.get("BOT_VER", "4.0")
@@ -319,7 +319,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```『E404NF-UserBot Telah Aktif』```")
+    await bot.send_message(BOTLOG_CHATID, "```𝘊𝘖𝘕𝘎𝘙𝘈𝘛𝘚🎉, 𝘍𝘳𝘰𝘮𝘝𝘛-𝘜𝘴𝘦𝘳𝘉𝘰𝘵 𝘛𝘦𝘭𝘢𝘩 𝘈𝘬𝘵𝘪𝘧```")
     return
 
 with bot:
@@ -349,7 +349,7 @@ def paginate_help(page_number, loaded_modules, prefix):
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
-        custom.Button.inline("{} {}".format("⚠️", x), data="ub_modul_{}".format(x))
+        custom.Button.inline("{} {}".format("🔥", x), data="ub_modul_{}".format(x))
         for x in helpable_modules
     ]
     pairs = list(zip(modules[::number_of_cols],
@@ -412,13 +412,13 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan E404NF-Userbot ",
+                    "Bantuan 𝘍𝘳𝘰𝘮𝘝𝘛-𝘜𝘴𝘦𝘳𝘉𝘰𝘵",
                     text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    "**E404NF-Userbot**",
+                    "**𝘍𝘳𝘰𝘮𝘝𝘛-𝘜𝘴𝘦𝘳𝘉𝘰𝘵**",
                     text="""**Anda Bisa Membuat FromVT-Ubot Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
                     buttons=[
                         [
@@ -447,7 +447,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Harap Deploy E404NF Userbot Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} "
+                reply_pop_up_alert = f"Harap Deploy Userbot Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} "
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -502,8 +502,8 @@ with bot:
 
     except BaseException:
         LOGS.info(
-            "Mode Inline Bot Mu Nonaktif. "
-            "Untuk Mengaktifkan Pergi Ke @BotFather, lalu settings bot > pilih mode inline > Turn On. ")
+            "Mode Inline Bot Mu Tidak Aktif. "
+            "Pergi Untuk Mengaktfikan Menu .helpme di @BotFather, lalu settings bot > pilih mode inline > Turn On. ")
     try:
         bot.loop.run_until_complete(check_botlog_chatid())
     except BaseException:
