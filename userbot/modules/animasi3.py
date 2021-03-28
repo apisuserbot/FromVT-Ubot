@@ -70,7 +70,7 @@ async def typewriter(typew):
                      "`\n┻┳T￣|`"
                      "\n**Permisii...**")
     sleep(3)
-    await typew.edit(("`\n┻┳|―-∩`"
+    await typew.edit("`\n┻┳|―-∩`"
                      "`\n┳┻|     ヽ`"
                      "`\n┻┳|    ● |`"
                      "`\n┳┻|▼) _ノ`"
