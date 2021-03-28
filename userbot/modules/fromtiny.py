@@ -1,21 +1,22 @@
 # frm Ultroid
-# port by Koala @vckyouuu
+# port by Vckyyy @vckyouuu
 # @LordUserbot_Group
 # @VckyouuBitch
 
 from userbot.events import register
 from userbot import CMD_HELP
-# Alvin Ganteng
+# Vicky Aulia Zulfikar
 
 
-@register(outgoing=True, pattern="^.tiny (.*)")
-async def ultiny(event):
+
+@register(outgoing=True, pattern=r"^\.tiny(?: |$)(.*)")
+async def _(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
-        await eor(event, "`Mohon Balas Pesan Ke Media`")
+        await event.edit("`Mohon Membalas Pesan Ke Sticker`")
         return
-    xx = await eor(event, "`Sedang Prosess...`")
-    ik = await ultroid_bot.download_media(reply)
+    xx = await event.edit("`Memproses...`")
+    ik = await bot.download_media(reply)
     im1 = Image.open("LordUserBot/lorduserbot.png")
     if ik.endswith(".tgs"):
         await event.client.download_media(reply, "ult.tgs")
@@ -81,8 +82,5 @@ async def ultiny(event):
     os.remove(ik)
 
 # @Vckyouuu
-CMD_HELP.update(
-    {
-        "ultiny": "`.tiny`\
-    \nPenjelasan: Untuk Memperkecil Sticker."
-    })
+CMD_HELP.update({"ultiny": "`.tiny`\
+    \nPenjelasan: Untuk Memperkecil Sticker."})
