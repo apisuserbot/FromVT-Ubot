@@ -39,30 +39,6 @@ async def typewriter(typew):
                      "`\n┳ﾐ(￣ ／`"
                      "`\n┻┳T￣|`"
                      "\n**Masih Ku Pantau**")
-
-
-@register(outgoing=True, pattern='^.misi(?: |$)(.*)')
-async def typewriter(typew):
-    typew.pattern_match.group(1)
-    await typew.edit(("`\n┻┳|―-∩`"
-                     "`\n┳┻|     ヽ`"
-                     "`\n┻┳|    ● |`"
-                     "`\n┳┻|▼) _ノ`"
-                     "`\n┻┳|￣  )`"
-                     "`\n┳ﾐ(￣ ／`"
-                     "`\n┻┳T￣|`"
-                     "\n**Permisii...**")
-    sleep(3)
-    await typew.edit(("`\n┻┳|―-∩`"
-                     "`\n┳┻|     ヽ`"
-                     "`\n┻┳|    ● |`"
-                     "`\n┳┻|▼) _ノ`"
-                     "`\n┻┳|￣  )`"
-                     "`\n┳ﾐ(￣ ／`"
-                     "`\n┻┳T￣|`"
-                     "\n**Apa Aku Bolehh Ikut Main?**")
-
-
 # Create by myself @localheart
 
 CMD_HELP.update({
