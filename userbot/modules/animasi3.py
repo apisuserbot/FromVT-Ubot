@@ -209,7 +209,5 @@ CMD_HELP.update({
     \n\n`.hua`\
     \nUsage: nangis.\
     \n\n`.ceritacinta` ; `.canda`\
-    \nUsage: liat sendiri`\
-    \n\n`.misi`\
-    \nUsage: permisii."
+    \nUsage: liat sendiri`"
 })
