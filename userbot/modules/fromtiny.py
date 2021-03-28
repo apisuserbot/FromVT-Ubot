@@ -1,8 +1,8 @@
-# Port By LiuAlvinas/Alvin For Lord Userbot From Ulttoid
+# Port By Vckyouuu For FromVT-UserBot From Ulttoid
 # Based Plugins
 # Dont Remove
 
-# Alvin Ganteng
+# Vcky Ganteng
 
 from PIL import Image
 
@@ -91,5 +91,5 @@ async def ultiny_(event):
 CMD_HELP.update(
     {
         "tiny": ".tiny\
-    \nTiny tiny lapyuuuu."
+    \nUntuk Memperkecil Sticker."
     })
