@@ -61,7 +61,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^.misi(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit(("`\n┻┳|―-∩`"
+    await typew.edit("`\n┻┳|―-∩`"
                      "`\n┳┻|     ヽ`"
                      "`\n┻┳|    ● |`"
                      "`\n┳┻|▼) _ノ`"
