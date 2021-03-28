@@ -8,7 +8,6 @@ from userbot import CMD_HELP
 # Vicky Aulia Zulfikar
 
 
-
 @register(outgoing=True, pattern=r"^\.tiny(?: |$)(.*)")
 async def _(event):
     reply = await event.get_reply_message()
