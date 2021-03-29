@@ -1,11 +1,12 @@
 # Port by Koala 🐨/@manuskarakitann
-# Nyenyenye bacot
+# Untuk FromVT-Userbot
 
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot.events import register
 from userbot import bot, CMD_HELP
 
+#Piki Gans Oke Tq
 
 @register(outgoing=True, pattern="^.dpint ?(.*)")
 @register(outgoing=True, pattern="^.dtik ?(.*)")
