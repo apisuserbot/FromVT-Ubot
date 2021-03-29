@@ -21,9 +21,9 @@ from userbot.events import register
 
 @register(outgoing=True, pattern=r"^\.rgb (.*)")
 async def sticklet(event):
-    R = random.randint(0, 256)
-    G = random.randint(0, 256)
-    B = random.randint(0, 256)
+    R = random.randint(0, 10)
+    G = random.randint(0, 10)
+    B = random.randint(0, 10)
 
     # get the input text
     # the text on which we would like to do the magic on
@@ -38,22 +38,22 @@ async def sticklet(event):
     # converts back the list to a string
     sticktext = "\n".join(sticktext)
 
-    image = Image.new("RGBA", (512, 512), (255, 255, 255, 0))
+    image = Image.new("RGBA", (100, 100), (50, 50, 50, 0))
     draw = ImageDraw.Draw(image)
-    fontsize = 230
+    fontsize = 200
 
     FONT_FILE = await get_font_file(event.client, "@FontRes")
 
     font = ImageFont.truetype(FONT_FILE, size=fontsize)
 
-    while draw.multiline_textsize(sticktext, font=font) > (512, 512):
-        fontsize -= 3
+    while draw.multiline_textsize(sticktext, font=font) > (100, 100):
+        fontsize -= 2
         font = ImageFont.truetype(FONT_FILE, size=fontsize)
 
     width, height = draw.multiline_textsize(sticktext, font=font)
     draw.multiline_text(
-        ((512 - width) / 2,
-         (512 - height) / 2),
+        ((100 - width) / 1,
+         (100 - height) / 1),
         sticktext,
         font=font,
         fill=(
