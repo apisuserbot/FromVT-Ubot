@@ -379,6 +379,48 @@ async def _(event):
 
         return
 
+    animation_interval = 1
+
+    animation_ttl = range(14)
+
+    input_str = event.pattern_match.group(1)
+
+    if input_str == "otak":
+
+        await event.edit(input_str)
+
+        animation_chars = [
+
+        "ᴏᴛᴀᴋ ᴍᴇꜱᴜᴍ ᴍᴜ ➡️ 🧠\n\n🧠         <(^_^ <)🗑",
+        "ᴏᴛᴀᴋ ᴍᴇꜱᴜᴍ ᴍᴜ ➡️ 🧠\n\n🧠       <(^_^ <)  🗑",
+        "ᴏᴛᴀᴋ ᴍᴇꜱᴜᴍ ᴍᴜ ➡️ 🧠\n\n🧠     <(^_^ <)    🗑",
+        "ᴏᴛᴀᴋ ᴍᴇꜱᴜᴍ ᴍᴜ ➡️ 🧠\n\n🧠   <(^_^ <)      🗑",
+        "ᴏᴛᴀᴋ ᴍᴇꜱᴜᴍ ᴍᴜ ➡️ 🧠\n\n🧠 <(^_^ <)        🗑",
+        "ᴏᴛᴀᴋ ᴍᴇꜱᴜᴍ ᴍᴜ ➡️ 🧠\n\n🧠<(^_^ <)         🗑",
+        "ᴏᴛᴀᴋ ᴍᴇꜱᴜᴍ ᴍᴜ ➡️ 🧠\n\n(> ^_^)>🧠         🗑",
+        "ᴏᴛᴀᴋ ᴍᴇꜱᴜᴍ ᴍᴜ ➡️ 🧠\n\n  (> ^_^)>🧠       🗑",
+        "ᴏᴛᴀᴋ ᴍᴇꜱᴜᴍ ᴍᴜ ➡️ 🧠\n\n    (> ^_^)>🧠     🗑",
+        "ᴏᴛᴀᴋ ᴍᴇꜱᴜᴍ ᴍᴜ ➡️ 🧠\n\n      (> ^_^)>🧠   🗑",
+        "ᴏᴛᴀᴋ ᴍᴇꜱᴜᴍ ᴍᴜ ➡️ 🧠\n\n        (> ^_^)>🧠 🗑",
+        "ᴏᴛᴀᴋ ᴍᴇꜱᴜᴍ ᴍᴜ ➡️ 🧠\n\n          (> ^_^)>🧠🗑",
+        "ᴏᴛᴀᴋ ᴍᴇꜱᴜᴍ ᴍᴜ ➡️ 🧠\n\n           (> ^_^)>🗑",
+        "ᴏᴛᴀᴋ ᴍᴇꜱᴜᴍ ᴍᴜ ➡️ 🧠\n\n           <(^_^ <)🗑",
+    ]
+
+        for i in animation_ttl:
+
+            await asyncio.sleep(animation_interval)
+
+            await event.edit(animation_chars[i % 14])
+
+
+@bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+async def _(event):
+
+    if event.fwd_from:
+
+        return
+
     animation_interval = 0.1
 
     animation_ttl = range(0, 7)
@@ -2979,7 +3021,7 @@ async def _(event):
 
 
 CMD_HELP.update({
-    "lordmemes":
+    "frommemes":
     "`.eye`\
 \nUsage: Lihat Sendiri.\
 \n\n`.earth`\
@@ -3000,6 +3042,8 @@ CMD_HELP.update({
 \nUsage: mememememe\
 \n\n`.qs`\
 \nUsage: Memulai Percakapan\
+\n\n`.otak`\
+\nUsage: Otak Mesum Mu\
 \n\n`.wtf`\
 \nUsage: Lihat Sendiri\
 \n\n`.load`,`.up`,`.square`,`.round`,`.heart`,`.monkey`,`.anim`,`.hand`,`.fnl`,`.cnt`,`.kiss`\
