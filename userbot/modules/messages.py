@@ -45,7 +45,7 @@ async def fastpurger(purg):
     await done.delete()
 
 
-@register(outgoing=True, pattern=r"^\.pgm")
+@register(outgoing=True, pattern=r"^\.purgeme")
 async def purgeme(delme):
     message = delme.text
     count = int(message[9:])
@@ -131,7 +131,7 @@ async def selfdestruct(destroy):
 
 CMD_HELP.update({"purge": ">`.purge`"
                  "\nUsage: Membersihkan semua pesan mulai dari pesan yang dibalas.",
-                 "purgeme": ">`.pgm <angka>`"
+                 "purgeme": ">`.purgeme <angka>`"
                  "\nUsage: Menghapus jumlah pesan anda, yang mau anda hapus.",
                  "del": ">`.del`"
                  "\nUsage: Menghapus pesan, balas ke pesan.",
