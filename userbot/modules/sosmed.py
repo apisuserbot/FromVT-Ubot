@@ -7,25 +7,25 @@ from userbot.events import register
 from userbot import bot, CMD_HELP
 
 
-@register(outgoing=True, pattern="^.pint ?(.*)")
-@register(outgoing=True, pattern="^.tik ?(.*)")
-@register(outgoing=True, pattern="^.ig ?(.*)")
+@register(outgoing=True, pattern="^.dpint ?(.*)")
+@register(outgoing=True, pattern="^.dtik ?(.*)")
+@register(outgoing=True, pattern="^.dig ?(.*)")
 async def insta(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await event.edit("`Balas Ke Link Untuk Download Cok.`")
+        await event.edit("`Balas Ke link Untuk Mengunduh Media.`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.text:
-        await event.edit("`Link Ny Mana Njing?.`")
+        await event.edit("`Balas Ke Link Untuk Mengunduh.`")
         return
     chat = "@SaveAsbot"
     reply_message.sender
     if reply_message.sender.bot:
-        await event.edit("Apalah Apalah Njing.")
+        await event.edit("Sedang Memprosess")
         return
-    await event.edit("`Proses Bentar Su...` 😡")
+    await event.edit("`Mohon Ditunggu..")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -38,14 +38,14 @@ async def insta(event):
             return
         if response.text.startswith("Forward"):
             await event.edit(
-                "Wah Private Nih Su Hmmm."
+                "Tolong Jangan Di Private"
             )
         else:
             await event.delete()
             await event.client.send_file(
                 event.chat_id,
                 response.message.media,
-                caption=f"@manusiarakitann 🐨",
+                caption=f"Woowwww🔥",
             )
             await event.client.send_read_acknowledge(conv.chat_id)
             await bot(functions.messages.DeleteHistoryRequest(peer=chat, max_id=0))
@@ -58,9 +58,9 @@ async def DeezLoader(event):
         return
     dlink = event.pattern_match.group(1)
     if ".com" not in dlink:
-        await event.edit("`Link Ny Mana Su? Mau Di Downlod Gak?`")
+        await event.edit("`Tolong Balas Ke Link Untuk Mengunduh Media`")
     else:
-        await event.edit("**Lagi Download Bentar** 🎶")
+        await event.edit("**Sedang Di Prosess, Mohon Tunggu** 🎶")
     chat = "@DeezLoadBot"
     async with bot.conversation(chat) as conv:
         try:
@@ -73,20 +73,20 @@ async def DeezLoader(event):
 #                                   #
             await bot.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await event.edit("@DeezLoadBot'Unblok Dulu La Asu.")
+            await event.edit("@DeezLoadBot'Mohon Di Unblock")
             return
         await bot.send_file(event.chat_id, song, caption=details.text)
 
 CMD_HELP.update(
     {
-        "sosmed": ">`.pint`"
-        "\nUsage: Download Media Dari Pinterest"
-        "\n\n>`.tik`"
-        "\nUsage: Download Vidip Tiktod Jedag Jedug."
-        "\n\n>`.ig`"
-        "\nUsage: Download Media Dari Instagram."
+        "sosmed": ">`.dpint`"
+        "\nUsage: Untuk Mengunduh Media Dari Pinterest"
+        "\n\n>`.dtik`"
+        "\nUsage: Untuk Mengunduh Media/Video Dari Tiktok"
+        "\n\n>`.dig`"
+        "\nUsage: Untuk Mengunduh Media/Video Dari Instagram"
         "\n\n>`.dez`"
-        "\nUsage: Download Lagu Via Deezloader"
+        "\nUsage: Untuk Mengunduh Music"
 
 
     }
