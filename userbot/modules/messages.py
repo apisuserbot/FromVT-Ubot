@@ -28,24 +28,24 @@ async def fastpurger(purg):
                 await purg.client.delete_messages(chat, msgs)
                 msgs = []
     else:
-        return await purg.edit("`Mohon Balas Ke Pesan Lord ツ `")
+        return await purg.edit("`Mohon Balas Ke Kenangan`")
 
     if msgs:
         await purg.client.delete_messages(chat, msgs)
     done = await purg.client.send_message(
-        purg.chat_id, f"`Berhasil Menghapus Pesan Lord`\
+        purg.chat_id, f"`Berhasil Menghapus Kenangan`\
         \nJumlah Pesan Yang Dihapus {str(count)} Pesan")
     """
     if BOTLOG:
         await purg.client.send_message(
             BOTLOG_CHATID,
-            "Berhasil Menghapus Pesan Lord " + str(count) + " Pesan Berhasil  Dibersihkan.")
+            "Berhasil Menghapus Kenangan " + str(count) + " Kenangan Berhasil  Dibersihkan.")
     """
     await sleep(2)
     await done.delete()
 
 
-@register(outgoing=True, pattern=r"^\.purgeme")
+@register(outgoing=True, pattern=r"^\.pgm")
 async def purgeme(delme):
     message = delme.text
     count = int(message[9:])
@@ -59,13 +59,13 @@ async def purgeme(delme):
 
     smsg = await delme.client.send_message(
         delme.chat_id,
-        "`Berhasil Menghapus Pesan Lord,` " + str(count) + " `Pesan Telah Dihapus ツ`",
+        "`Berhasil Menghapus Pesan Kenangan,` " + str(count) + " `Kenangan Telah Dihapus`",
     )
     """
     if BOTLOG:
         await delme.client.send_message(
             BOTLOG_CHATID,
-            "`Lord Telah Menghapus Pesan,` " + str(count) + " Pesan Telah Dihapus ツ`")
+            "`Telah Menghapus Kenangan,` " + str(count) + " Kenangan Telah Dihapus`")
     """
     await sleep(2)
     i = 1
@@ -82,14 +82,14 @@ async def delete_it(delme):
             """
             if BOTLOG:
                 await delme.client.send_message(
-                    BOTLOG_CHATID, "`Lord Berhasil Menghapus Pesan ツ`")
+                    BOTLOG_CHATID, "`Berhasil Menghapus Kenangan`")
             """
         except rpcbaseerrors.BadRequestError:
-            await delme.edit("`Tidak Bisa Menghapus Pesan`")
+            await delme.edit("`Tidak Bisa Menghapus Kenangan`")
             """
             if BOTLOG:
                 await delme.client.send_message(
-                    BOTLOG_CHATID, "`Tidak Bisa Menghapus Pesan`")
+                    BOTLOG_CHATID, "`Tidak Bisa Menghapus Kenangan`")
             """
 
 
@@ -131,7 +131,7 @@ async def selfdestruct(destroy):
 
 CMD_HELP.update({"purge": ">`.purge`"
                  "\nUsage: Membersihkan semua pesan mulai dari pesan yang dibalas.",
-                 "purgeme": ">`.purgeme <angka>`"
+                 "purgeme": ">`.pgm <angka>`"
                  "\nUsage: Menghapus jumlah pesan anda, yang mau anda hapus.",
                  "del": ">`.del`"
                  "\nUsage: Menghapus pesan, balas ke pesan.",
