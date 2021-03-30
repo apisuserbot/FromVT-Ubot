@@ -1,20 +1,5 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
-
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-# By @xditya. Thanks to @AvinashReddy for the ytdl base.
+#port By @Vckyouuu
+#FromVT-UserBot
 
 import json
 import os
@@ -35,15 +20,16 @@ from youtube_dl.utils import (
 )
 from youtubesearchpython import SearchVideos
 
-from telebot import CMD_HELP
+from userbot import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="song (.*)"))
-async def download_video(tele):
-    x = await eor(tele, "Searching...")
+
+@register(outgoing=True, pattern="^.song(?: |$)(.*)"))
+async def download_video(event):
+    x = await event.edit("Searching...")
     url = tele.pattern_match.group(1)
     if not url:
-        return await x.edit("**Error**\nUsage - `.song <song name>`")
+        return await event.edit("**Error**\nUsage - `.song <song name>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
     test = search.result()
     p = json.loads(test)
@@ -51,9 +37,9 @@ async def download_video(tele):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await x.edit("`No matching song found...`")
+        return await event.edit("`No matching song found...`")
     type = "audio"
-    await x.edit(f"`Preparing to download {url}...`")
+    await event.edit(f"`Preparing to download {url}...`")
     if type == "audio":
         opts = {
             "format": "bestaudio",
@@ -75,37 +61,37 @@ async def download_video(tele):
             "logtostderr": False,
         }
     try:
-        await x.edit("`Getting info...`")
+        await event.edit("`Getting info...`")
         with YoutubeDL(opts) as rip:
             rip_data = rip.extract_info(url)
     except DownloadError as DE:
-        await x.edit(f"`{str(DE)}`")
+        await event.edit(f"`{str(DE)}`")
         return
     except ContentTooShortError:
-        await x.edit("`The download content was too short.`")
+        await event.edit("`The download content was too short.`")
         return
     except GeoRestrictedError:
-        await x.edit(
+        await event.edit(
             "`Video is not available from your geographic location due to geographic restrictions imposed by a website.`"
         )
         return
     except MaxDownloadsReached:
-        await x.edit("`Max-downloads limit has been reached.`")
+        await event.edit("`Max-downloads limit has been reached.`")
         return
     except PostProcessingError:
-        await x.edit("`There was an error during post processing.`")
+        await event.edit("`There was an error during post processing.`")
         return
     except UnavailableVideoError:
-        await x.edit("`Media is not available in the requested format.`")
+        await event.edit("`Media is not available in the requested format.`")
         return
     except XAttrMetadataError as XAME:
-        await x.edit(f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
+        await event.edit(f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
         return
     except ExtractorError:
-        await x.edit("`There was an error during info extraction.`")
+        await event.edit("`There was an error during info extraction.`")
         return
     except Exception as e:
-        await x.edit(f"{str(type(e)): {str(e)}}")
+        await event.edit(f"{str(type(e)): {str(e)}}")
         return
     try:
         sung = str(pybase64.b64decode("QFRlbGVCb3RIZWxw"))[2:14]
@@ -119,7 +105,7 @@ By - {}
 """.format(
         rip_data["title"], rip_data["uploader"]
     )
-    await x.edit(f"`{upteload}`")
+    await event.edit(f"`{upteload}`")
     await telebot.send_file(
         tele.chat_id,
         f"{rip_data['id']}.mp3",
@@ -138,10 +124,10 @@ By - {}
 
 @telebot.on(admin_cmd(pattern="vsong (.*)"))
 async def download_video(tele):
-    x = await eor(tele, "Processing..")
+    x = await event.edit("Processing..")
     url = tele.pattern_match.group(1)
     if not url:
-        return await x.edit("**Error**\nUsage - `.vsong <song name>`")
+        return await event.edit("**Error**\nUsage - `.vsong <song name>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
     test = search.result()
     p = json.loads(test)
@@ -149,9 +135,9 @@ async def download_video(tele):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await x.edit("`No matching songs found...`")
+        return await event.edit("`No matching songs found...`")
     type = "audio"
-    await x.edit("`Preparing to download...`")
+    await event.edit("`Preparing to download...`")
     if type == "audio":
         opts = {
             "format": "best",
@@ -168,37 +154,37 @@ async def download_video(tele):
             "quiet": True,
         }
     try:
-        await x.edit("`Fetching data, please wait..`")
+        await event.edit("`Fetching data, please wait..`")
         with YoutubeDL(opts) as rip:
             rip_data = rip.extract_info(url)
     except DownloadError as DE:
-        await x.edit(f"`{str(DE)}`")
+        await event.edit(f"`{str(DE)}`")
         return
     except ContentTooShortError:
-        await x.edit("`The download content was too short.`")
+        await event.edit("`The download content was too short.`")
         return
     except GeoRestrictedError:
-        await x.edit(
+        await event.edit(
             "`Video is not available from your geographic location due to geographic restrictions imposed by a website.`"
         )
         return
     except MaxDownloadsReached:
-        await x.edit("`Max-downloads limit has been reached.`")
+        await event.edit("`Max-downloads limit has been reached.`")
         return
     except PostProcessingError:
-        await x.edit("`There was an error during post processing.`")
+        await event.edit("`There was an error during post processing.`")
         return
     except UnavailableVideoError:
-        await x.edit("`Media is not available in the requested format.`")
+        await event.edit("`Media is not available in the requested format.`")
         return
     except XAttrMetadataError as XAME:
-        await x.edit(f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
+        await event.edit(f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
         return
     except ExtractorError:
-        await x.edit("`There was an error during info extraction.`")
+        await event.edit("`There was an error during info extraction.`")
         return
     except Exception as e:
-        await x.edit(f"{str(type(e)): {str(e)}}")
+        await event.edit(f"{str(type(e)): {str(e)}}")
         return
     try:
         sung = str(pybase64.b64decode("QFRlbGVCb3RIZWxw"))[2:14]
@@ -212,7 +198,7 @@ By - {}
 """.format(
         rip_data["title"], rip_data["uploader"]
     )
-    await x.edit(f"`{upteload}`")
+    await event.edit(f"`{upteload}`")
     await telebot.send_file(
         tele.chat_id,
         f"{rip_data['id']}.mp4",
