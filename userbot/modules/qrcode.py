@@ -99,7 +99,7 @@ size=200x200&charset-source=UTF-8&charset-target=UTF-8\
 CMD_HELP.update({
     "qr codes": [
         'QR Codes',
-        " - `.getqr`: Get the QR Code content from the replied QR Code.\n"
-        " - `.makeqr <content>`: Make a QR Code from the given message (text, link, etc...).\n"
+        " - `.getqr`: Dapatkan konten Kode QR dari Kode QR yang menjawab.\n"
+        " - `.makeqr <content>`: Buat Kode QR dari pesan yang diberikan (text, link, etc...).\n"
     ]
 })
