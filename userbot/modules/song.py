@@ -23,12 +23,12 @@ from youtubesearchpython import SearchVideos
 from userbot import CMD_HELP
 
 
-@register(outgoing=True, pattern="^.song(?: |$)(.*)"))
+@register(outgoing=True, pattern=r"^\.songs (.*)")
 async def download_video(event):
     x=await event.edit("Searching...")
     url=tele.pattern_match.group(1)
     if not url:
-        return await event.edit("**Error**\nUsage - `.song <song name>`")
+        return await event.edit("**Error**\nUsage - `.songs <song name>`")
     search=SearchVideos(url, offset = 1, mode = "json", max_results = 1)
     test=search.result()
     p=json.loads(test)
@@ -121,12 +121,12 @@ By - {}
     os.remove(f"{rip_data['id']}.mp3")
 
 
-@register(outgoing=True, pattern="^.vsong(?: |$)(.*)"))
+@register(outgoing=True, pattern=r"^\.vsongs (.*)")
 async def download_video(event):
     x = await event.edit("Processing..")
     url = tele.pattern_match.group(1)
     if not url:
-        return await event.edit("**Error**\nUsage - `.vsong <song name>`")
+        return await event.edit("**Error**\nUsage - `.vsongs <song name>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
     test = search.result()
     p = json.loads(test)
