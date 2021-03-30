@@ -14,7 +14,7 @@ from datetime import datetime
 from requests import get, post
 
 from userbot import CMD_HELP
-from userbot.events import register, grp_exclude
+from userbot.events import register
 
 
 def progress(current, total):
@@ -24,9 +24,8 @@ def progress(current, total):
 
 
 @register(pattern=r"^.getqr$", outgoing=True)
-@grp_exclude()
 async def parseqr(qr_e):
-    """ For .getqr command, get QR Code content from the replied photo. """
+    """ Untuk .getqr perintah, dapatkan konten Kode QR dari foto yang dibalas. """
     if qr_e.fwd_from:
         return
     start = datetime.now()
@@ -46,9 +45,8 @@ async def parseqr(qr_e):
 
 
 @register(pattern=r"^.makeqr(?: |$)([\s\S]*)", outgoing=True)
-@grp_exclude()
 async def make_qr(qrcode):
-    """ For .makeqr command, make a QR Code containing the given content. """
+    """ Untuk .makeqr perintah, buat Kode QR yang berisi konten yang diberikan. """
     if qrcode.fwd_from:
         return
     start = datetime.now()
