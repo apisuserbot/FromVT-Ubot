@@ -25,22 +25,22 @@ from userbot import CMD_HELP
 
 @register(outgoing=True, pattern=r"^\.songs (.*)")
 async def download_video(event):
-    x=await event.edit("Searching...")
-    url=tele.pattern_match.group(1)
+    await event.edit("Searching...")
+    url = tele.pattern_match.group(1)
     if not url:
         return await event.edit("**Error**\nUsage - `.songs <song name>`")
-    search=SearchVideos(url, offset = 1, mode = "json", max_results = 1)
-    test=search.result()
-    p=json.loads(test)
-    q=p.get("search_result")
+    search = SearchVideos(url, offset=1, mode="json", max_results=1)
+    test = search.result()
+    p = json.loads(test)
+    q = p.get("search_result")
     try:
-        url=q[0]["link"]
+        url = q[0]["link"]
     except BaseException:
         return await event.edit("`No matching song found...`")
-    type="audio"
+    type = "audio"
     await event.edit(f"`Preparing to download {url}...`")
     if type == "audio":
-        opts={
+        opts = {
             "format": "bestaudio",
             "addmetadata": True,
             "key": "FFmpegMetadata",
