@@ -22,8 +22,7 @@ from youtubesearchpython import SearchVideos
 
 from userbot import CMD_HELP
 
-
-@register(outgoing=True, pattern=r"^\.songs (.*)")
+@register(admin_cmd(pattern="songs (.*)"))
 async def download_video(event):
     await event.edit("Searching...")
     url = tele.pattern_match.group(1)
@@ -121,7 +120,7 @@ By - {}
     os.remove(f"{rip_data['id']}.mp3")
 
 
-@register(outgoing=True, pattern=r"^\.vsongs (.*)")
+@register(admin_cmd(pattern="vsongs (.*)"))
 async def download_video(event):
     x = await event.edit("Processing..")
     url = tele.pattern_match.group(1)
