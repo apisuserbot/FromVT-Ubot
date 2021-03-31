@@ -108,8 +108,7 @@ async def on_afk(event):
         if reason:
             message_to_reply = (
                 f"**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ** `{total_afk_time}` **ʏᴀɴɢ ʟᴀʟᴜ**\n"
-                f"**ᴋᴀʀᴇɴᴀ :** `{reason}`"
-            )
+                f"**ᴋᴀʀᴇɴᴀ :** `{reason}`")
         else:
             message_to_reply = f"**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ** `{total_afk_time}` **ʏᴀɴɢ ʟᴀʟᴜ**"
         try:
