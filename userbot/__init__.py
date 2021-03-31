@@ -3,7 +3,7 @@
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 # inline credit @VckyouuBitch
-# Pengguna E404NF-UserBot
+# Pengguna FromVT-UserBot
 """ Userbot initialization. """
 
 import os
@@ -418,16 +418,16 @@ with bot:
                     link_preview=True)
             else:
                 result = builder.article(
-                    "**𝘍𝘳𝘰𝘮𝘝𝘛-𝘜𝘴𝘦𝘳𝘉𝘰𝘵**",
-                    text="""**Anda Bisa Membuat FromVT-Ubot Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
+                    "**🔥 𝘍𝘳𝘰𝘮𝘝𝘛-𝘜𝘴𝘦𝘳𝘉𝘰𝘵 🔥**",
+                    text="""**Buat Userbot Anda Sendiri Dengan Cara :** [Tekan Disini](https://github.com/vckyou/FromVT-Ubot)""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "Repo **FromVT-UserBot",
+                                "Repo",
                                 "https://github.com/vckyou/FromVT-Ubot"),
                             custom.Button.url(
-                                "Pemilik Repo",
-                                "t.me/Vckyouuu")],
+                                "Owner",
+                                "t.me/VckyouuBitch")],
                     ],
                     link_preview=False,
                 )
