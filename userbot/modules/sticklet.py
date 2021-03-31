@@ -1,100 +1,51 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.d (the "License");
-# you may not use this file except in compliance with the License.
-#
-# Random RGB Sticklet by @PhycoNinja13b
-# modified by @AnggaR96s
+#Piki Ganteng
+# modified by @VckyouuBitch
 
 
 import io
-import os
-import random
 import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
-from telethon.tl.types import InputMessagesFilterDocument
 
 from userbot import CMD_HELP
-from userbot.events import register
+from userbot.events import errors_handler, register
 
 
 @register(outgoing=True, pattern=r"^\.rgb (.*)")
 async def sticklet(event):
-    R = random.randint(0, 10)
-    G = random.randint(0, 10)
-    B = random.randint(0, 10)
-
-    # get the input text
-    # the text on which we would like to do the magic on
     sticktext = event.pattern_match.group(1)
 
-    # delete the userbot command,
-    # i don't know why this is required
+    if not sticktext:
+        await event.edit("`Saya Perlu Teks Untuk Menempel!`")
+        return
+
     await event.delete()
 
-    # https://docs.python.org/3/library/textwrap.html#textwrap.wrap
     sticktext = textwrap.wrap(sticktext, width=10)
-    # converts back the list to a string
-    sticktext = "\n".join(sticktext)
+    sticktext = '\n'.join(sticktext)
 
-    image = Image.new("RGBA", (100, 100), (50, 50, 50, 0))
+    image = Image.new("RGBA", (512, 512), (255, 255, 255, 0))
     draw = ImageDraw.Draw(image)
-    fontsize = 200
+    fontsize = 230
+    font = ImageFont.truetype("userbot/files/RobotoMono-Regular.ttf", size=fontsize)
 
-    FONT_FILE = await get_font_file(event.client, "@FontRes")
-
-    font = ImageFont.truetype(FONT_FILE, size=fontsize)
-
-    while draw.multiline_textsize(sticktext, font=font) > (100, 100):
-        fontsize -= 2
-        font = ImageFont.truetype(FONT_FILE, size=fontsize)
+    while draw.multiline_textsize(sticktext, font=font) > (512, 512):
+        fontsize -= 3
+        font = ImageFont.truetype("userbot/files/RobotoMono-Regular.ttf", size=fontsize)
 
     width, height = draw.multiline_textsize(sticktext, font=font)
-    draw.multiline_text(
-        ((100 - width) / 1,
-         (100 - height) / 1),
-        sticktext,
-        font=font,
-        fill=(
-            R,
-            G,
-            B))
+    draw.multiline_text(((512-width)/2,(512-height)/2), sticktext, font=font, fill="white")
 
     image_stream = io.BytesIO()
-    image_stream.name = "dclxvi.webp"
+    image_stream.name = "sticker.webp"
     image.save(image_stream, "WebP")
     image_stream.seek(0)
 
-    # finally, reply the sticker
-    await event.client.send_file(
-        event.chat_id,
-        image_stream,
-        force_document=False,
-        reply_to=event.message.reply_to_msg_id,
-    )
-
-    # cleanup
-    try:
-        os.remove(FONT_FILE)
-    except BaseException:
-        pass
+    await event.client.send_file(event.chat_id, image_stream)
 
 
-async def get_font_file(client, channel_id):
-    # first get the font messages
-    font_file_message_s = await client.get_messages(
-        entity=channel_id,
-        filter=InputMessagesFilterDocument,
-        # this might cause FLOOD WAIT,
-        # if used too many times
-        limit=None,
-    )
-    # get a random font from the list of fonts
-    # https://docs.python.org/3/library/random.html#random.choice
-    font_file_message = random.choice(font_file_message_s)
-    # download and return the file path
-    return await client.download_media(font_file_message)
-
-
-CMD_HELP.update({"sticklet": "`.rgb` <text>" "\nUsage: Create RGB sticker."})
+CMD_HELP.update({
+    'rgb':
+    ".rgb <text>"
+    "\nUsage: Ubah teks menjadi stiker."
+})
