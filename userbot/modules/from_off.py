@@ -55,12 +55,12 @@ async def set_not_afk(event):
                 shite = await bot.send_message(event.chat_id, file=pic)
                 shites = await bot.send_message(
                     event.chat_id,
-                    f"**ʜɪ {ALIVE_NAME} ꜱᴜᴅᴀʜ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ**\n**ᴅᴀʀɪ ᴏꜰꜰʟɪɴᴇ :** `{total_afk_time}` **ʏᴀɴɢ ʟᴀʟᴜ**",
+                    f"**{ALIVE_NAME} ꜱᴜᴅᴀʜ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ**\n**ᴅᴀʀɪ ᴏꜰꜰʟɪɴᴇ :** `{total_afk_time}` **ʏᴀɴɢ ʟᴀʟᴜ**",
                 )
             else:
                 shite = await bot.send_message(
                     event.chat_id,
-                    f"**ʜɪ {ALIVE_NAME} ꜱᴜᴅᴀʜ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ**\n**ᴅᴀʀɪ ᴏꜰꜰʟɪɴᴇ :** `{total_afk_time}` **ʏᴀɴɢ ʟᴀʟᴜ**",
+                    f"**{ALIVE_NAME} ꜱᴜᴅᴀʜ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ**\n**ᴅᴀʀɪ ᴏꜰꜰʟɪɴᴇ :** `{total_afk_time}` **ʏᴀɴɢ ʟᴀʟᴜ**",
                     file=pic,
                 )
         except BaseException:
