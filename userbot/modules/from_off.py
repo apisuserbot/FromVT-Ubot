@@ -1,6 +1,7 @@
 # Copyright (C) 2020 TeamUltroid
-# Ported by X_ImFine
-# Recode by @mrismanaziz
+# Ported by VckyGanss
+# Recode by @Vckyouuu
+# FromVT-Userbot
 
 import os
 import asyncio
@@ -54,17 +55,17 @@ async def set_not_afk(event):
                 shite = await bot.send_message(event.chat_id, file=pic)
                 shites = await bot.send_message(
                     event.chat_id,
-                    f"**{ALIVE_NAME} Kembali Online Untuk Parming**\n**Dari AFK :** `{total_afk_time}` **Yang Lalu**",
+                    f"**ʜɪ {ALIVE_NAME} ꜱᴜᴅᴀʜ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ**\n**ᴅᴀʀɪ ᴏꜰꜰʟɪɴᴇ :** `{total_afk_time}` **ʏᴀɴɢ ʟᴀʟᴜ**",
                 )
             else:
                 shite = await bot.send_message(
                     event.chat_id,
-                    f"**{ALIVE_NAME} Pengangguran sok Sibuk Balik Lagi!**\n**Dari AFK :** `{total_afk_time}` **Yang Lalu**",
+                    f"**ʜɪ {ALIVE_NAME} ꜱᴜᴅᴀʜ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ**\n**ᴅᴀʀɪ ᴏꜰꜰʟɪɴᴇ :** `{total_afk_time}` **ʏᴀɴɢ ʟᴀʟᴜ**",
                     file=pic,
                 )
         except BaseException:
             shite = await bot.send_message(
-                event.chat_id, f"**{ALIVE_NAME} Kembali Online**\n**Dari AFK :** `{total_afk_time}` **Yang Lalu**"
+                event.chat_id, f"**{ALIVE_NAME} ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ**\n**ᴅᴀʀɪ ᴏꜰꜰʟɪɴᴇ :** `{total_afk_time}` **ʏᴀɴɢ ʟᴀʟᴜ**"
             )
 
         except BaseException:
@@ -106,10 +107,11 @@ async def on_afk(event):
         msg = None
         if reason:
             message_to_reply = (
-                f"**✘ {ALIVE_NAME} Sedang OFFLINE** `{total_afk_time}` **Yang Lalu**\n" +
-                f"**✦҈͜͡➳ Karena :** `{reason}`")
+                f"**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ** `{total_afk_time}` **ʏᴀɴɢ ʟᴀʟᴜ**\n"
+                f"**ᴋᴀʀᴇɴᴀ :** `{reason}`"
+            )
         else:
-            message_to_reply = f"**✘ {ALIVE_NAME} Sedang Offline** `{total_afk_time}` **Yang Lalu**"
+            message_to_reply = f"**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ** `{total_afk_time}` **ʏᴀɴɢ ʟᴀʟᴜ**"
         try:
             if pic.endswith((".tgs", ".webp")):
                 msg = await event.reply(file=pic)
@@ -134,7 +136,7 @@ async def on_afk(event):
             pass
 
 
-@register(outgoing=True, pattern="^.afk(?: |$)(.*)",
+@register(outgoing=True, pattern="^.off(?: |$)(.*)",
           disable_errors=True)  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
@@ -172,56 +174,56 @@ async def _(event):
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(event.chat_id, file=pic)
                     await bot.send_message(
-                        event.chat_id, f"\n**✘ {ALIVE_NAME} Sedang OFFLINE** ✘\n**✦҈͜͡➳ Karena :** `{reason}`"
+                        event.chat_id, f"\n**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ 💤**\n**✦ ᴋᴀʀᴇɴᴀ :** `{reason}`"
                     )
                 else:
                     await bot.send_message(
-                        event.chat_id, f"\n**✘ {ALIVE_NAME} Sedang OFFLINE** ✘\n**✦҈͜͡➳ Karena :** `{reason}`", file=pic
+                        event.chat_id, f"\n**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ 💤**\n**✦ ᴋᴀʀᴇɴᴀ :** `{reason}`", file=pic
                     )
             except BaseException:
                 await bot.send_message(
-                    event.chat_id, f"\n**✘ {ALIVE_NAME} Sedang OFFLINE** ✘\n**✦҈͜͡➳ Karena :** `{reason}`"
+                    event.chat_id, f"\n**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ 💤**\n**✦ ᴋᴀʀᴇɴᴀ :** `{reason}`"
                 )
         else:
             try:
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(event.chat_id, file=pic)
                     await bot.send_message(
-                        event.chat_id, f"**✘ {ALIVE_NAME} Sedang OFFLINE, Lagi so Sibuk nih xixixi..**"
+                        event.chat_id, f"**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**"
                     )
                 else:
                     await bot.send_message(
-                        event.chat_id, f"**✘ {ALIVE_NAME} Sedang OFFLINE, Lagi so Sibuk nih xixixi..**", file=pic
+                        event.chat_id, f"**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**", file=pic
                     )
             except BaseException:
-                await bot.send_message(event.chat_id, f"**✘ {ALIVE_NAME} Sedang OFFLINE ✘**")
+                await bot.send_message(event.chat_id, f"**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ 💤**")
         await event.delete()
         try:
             if reason and pic:
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(BOTLOG_CHATID, file=pic)
                     await bot.send_message(
-                        BOTLOG_CHATID, f"\n**✘ {ALIVE_NAME} Sedang AFK ✘**\n**✦҈͜͡➳ Karena :** `{reason}`"
+                        BOTLOG_CHATID, f"\n**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ 💤**\n**✦ ᴋᴀʀᴇɴᴀ :** `{reason}`"
                     )
                 else:
                     await bot.send_message(
-                        BOTLOG_CHATID, f"\n**✘ {ALIVE_NAME} Sedang AFK ✘**\n**✦҈͜͡➳ Karena :** `{reason}`", file=pic
+                        BOTLOG_CHATID, f"\n**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ 💤**\n**✦ ᴋᴀʀᴇɴᴀ :** `{reason}`", file=pic
                     )
             elif reason:
                 await bot.send_message(
-                    BOTLOG_CHATID, f"\n**✘ {ALIVE_NAME} Sedang AFK ✘**\n**✦҈͜͡➳ Karena :** `{reason}`"
+                    BOTLOG_CHATID, f"\n**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ 💤**\n**✦ ᴋᴀʀᴇɴᴀ :** `{reason}`"
                 )
             elif pic:
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(BOTLOG_CHATID, file=pic)
-                    await bot.send_message(BOTLOG_CHATID, f"\n**✘ {ALIVE_NAME} Sedang AFK ✘**")
+                    await bot.send_message(BOTLOG_CHATID, f"\n**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ 💤**")
                 else:
-                    await bot.send_message(BOTLOG_CHATID, f"\n**✘ {ALIVE_NAME} Sedang AFK ✘**", file=pic)
+                    await bot.send_message(BOTLOG_CHATID, f"\n**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ 💤**", file=pic)
             else:
-                await bot.send_message(BOTLOG_CHATID, f"\n**✘ {ALIVE_NAME} Sedang AFK ✘**")
+                await bot.send_message(BOTLOG_CHATID, f"\n**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ 💤**")
         except Exception as e:
             BOTLOG_CHATIDger.warn(str(e))
 
 
-CMD_HELP.update({"afk": ".afk (reason) atau balas media untuk itu "
-                 "\nPenggunaan afk bisa dengan media keren ketika seseorang menandai atau membalas salah satu pesan atau dm Anda."})
+CMD_HELP.update({"off": ".off (reason) atau balas media untuk itu "
+                 "\nPenggunaan afk bisa dengan media keren ketika seseorang menandai atau membalas salah satu pesan atau chat pribadi Anda."})
