@@ -48,9 +48,6 @@ async def stoppo(ult):
     await eor(ult, "`AUTOPIC Stopped !!`")
 
 
-CMD_HELP.update({
-    "autopic":
-    "`.autopic`\
-    \nPenjelasan: Unlimited Pp Pic
-    \n\n`.stoppic`
-    \nPenjelasan: Stop Unlimited Pp Pic"})
+
+CMD_HELP.update({"tiny": "`.autopic` : `.stoppic`\
+    \nPenjelasan: `.autopic : Auto Pic | .stoppic : Stop Auto Pic`"})
