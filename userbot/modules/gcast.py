@@ -1,14 +1,15 @@
 # frm Ultroid
 # port by Koala @manusiarakitann
-# @LordUserbot_Group
-# Alvin Ganteng
+# VckyouuBitch
+
+import asyncio
+import io
 
 from userbot.events import register
 from userbot import CMD_HELP, bot
-# Alvin Ganteng
+#Vcky Gansssss
 
-
-@register(outgoing=True, pattern="^.rgc (.*)")
+@register(outgoing=True, pattern="^.rgcast (.*)")
 async def broadcast_remover(event):
     chat_id = event.pattern_match.group(1)
     await event.edit(event, get_string("com_1"))
