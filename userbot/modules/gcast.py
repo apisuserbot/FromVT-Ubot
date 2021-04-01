@@ -2,7 +2,6 @@
 # port by Koala @manusiarakitann
 # VckyouuBitch
 
-
 from userbot.events import register
 from userbot import CMD_HELP, bot
 #Vcky Gansssss
