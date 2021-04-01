@@ -7,7 +7,6 @@ import random
 
 from telethon import functions
 
-from . import *
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
