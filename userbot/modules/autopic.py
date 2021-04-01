@@ -1,4 +1,4 @@
-#port by @vckyouubitch
+# port by @vckyouubitch
 
 
 import asyncio
@@ -10,7 +10,6 @@ from telethon import functions
 from . import *
 from userbot.events import register
 from userbot import CMD_HELP, bot
-
 
 
 @register(outgoing=True, pattern="^.autopic(?: |$)(.*)")
@@ -40,8 +39,6 @@ async def autopic(e):
         await asyncio.sleep(1100)
 
 
-
-
 @register(outgoing=True, pattern="^.stoppic(?: |$)(.*)")
 async def stoppo(ult):
     gt = udB.get("AUTOPIC")
@@ -55,5 +52,5 @@ CMD_HELP.update({
     "autopic":
     "`.autopic`\
     \nPenjelasan: Unlimited Pp Pic
-    \n\n`.stoppic`\
+    \n\n`.stoppic`
     \nPenjelasan: Stop Unlimited Pp Pic"})
