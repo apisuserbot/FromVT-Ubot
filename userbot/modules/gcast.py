@@ -11,7 +11,7 @@ from userbot import CMD_HELP, bot
 @register(outgoing=True, pattern="^.rgc (.*)")
 async def broadcast_remover(event):
     chat_id = event.pattern_match.group(1)
-    x = await event.edit(event, get_string("com_1"))
+    await event.edit(event, get_string("com_1"))
     if chat_id == "all":
         await event.edit("`Menghapus...`")
         udB.delete("BROADCAST")
