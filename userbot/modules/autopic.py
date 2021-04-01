@@ -25,7 +25,7 @@ async def autopic(e):
         num = 0
     page = clls[num]
     title = page["title"]
-    await eor(get_string("autopic_3").format(title))
+    await event.edit(get_string("autopic_3").format(title))
     udB.set("AUTOPIC", "True")
     while True:
         ge = udB.get("AUTOPIC")
