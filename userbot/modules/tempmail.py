@@ -13,7 +13,7 @@ import asyncio
 
 
 @register(outgoing=True, pattern="^.tempmail ?(.*)")
-async def demn(event):
+async def _(event):
     chat = "@TempMailBot"
     fromvt = await event.edit("Sedang Memprosess...")
     async with bot.conversation(chat) as conv:
@@ -32,11 +32,9 @@ async def demn(event):
         except YouBlockedUserError:
             await fromvt.edit("Mohon Unblock @TempMailBot !!!")
             return
-        await event.edit(f"TEMPMAIL ~ `{response.message.message}`\n\n[KLIK DISINI UNTUK MELIHAT VERIFIKASI]({link})")
+        await event.edit(f"**TEMPMAIL** ~ `{response.message.message}`\n\n[KLIK DISINI UNTUK MELIHAT VERIFIKASI]({link})")
 
 
 # Piki Gantengg
-CMD_HELP.update(
-    {
-        "tempmail": "**Modules:** __Temp Mail__\n\n**Perintah:** `.tempmail`"
-        "\n**Penjelasan:** Mendapatkan Email Gratis Dari Temp Mail"})
+CMD_HELP.update({"tempmail": "**Modules:** __Temp Mail__\n\n**Perintah:** `.tempmail`"
+                 "\n**Penjelasan:** Mendapatkan Email Gratis Dari Temp Mail"})
