@@ -107,8 +107,8 @@ By - {}
         rip_data["title"], rip_data["uploader"]
     )
     await event.edit(f"`{upteload}`")
-    await bot.send_file(
-        bot.chat_id,
+    await event.client.send_file(
+        event.chat_id,
         f"{rip_data['id']}.mp3",
         supports_streaming=True,
         caption=f"⫸ Song - {rip_data['title']}\n⫸ By - {rip_data['uploader']}\n",
