@@ -1,4 +1,5 @@
-# Thanks To xditya
+# Thanks To Ultroid
+# Jangan Dihapuss!!!
 # Port By @Vckyouuu
 
 
@@ -25,12 +26,12 @@ from userbot.events import register
 from userbot import CMD_HELP
 
 
-@register(outgoing=True, pattern=r"^\.asong (.*)")
+@register(outgoing=True, pattern=r"^\.songs (.*)")
 async def download_video(event):
     await event.edit("Searching...")
     url = event.pattern_match.group(1)
     if not url:
-        return await event.edit("**Error**\nUsage - `.asong <song name>`")
+        return await event.edit("**Error**\nUsage - `.songs <song name>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
     test = search.result()
     p = json.loads(test)
@@ -38,9 +39,9 @@ async def download_video(event):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await event.edit("`No matching song found...`")
+        return await event.edit("`Tidak ditemukan lagu yang cocok...`")
     type = "audio"
-    await event.edit(f"`Preparing to download {url}...`")
+    await event.edit(f"`Bersiap untuk mengunduh {url}...`")
     if type == "audio":
         opts = {
             "format": "bestaudio",
@@ -62,34 +63,34 @@ async def download_video(event):
             "logtostderr": False,
         }
     try:
-        await event.edit("`Getting info...`")
+        await event.edit("`Mendapatkan informasi...`")
         with YoutubeDL(opts) as rip:
             rip_data = rip.extract_info(url)
     except DownloadError as DE:
         await event.edit(f"`{str(DE)}`")
         return
     except ContentTooShortError:
-        await event.edit("`The download content was too short.`")
+        await event.edit("`Konten unduhan terlalu pendek.`")
         return
     except GeoRestrictedError:
         await event.edit(
-            "`Video is not available from your geographic location due to geographic restrictions imposed by a website.`"
+            "`Video tidak tersedia dari lokasi geografis Anda karena batasan geografis yang diberlakukan oleh situs web.`"
         )
         return
     except MaxDownloadsReached:
-        await event.edit("`Max-downloads limit has been reached.`")
+        await event.edit("`Batas unduhan maksimal telah tercapai.`")
         return
     except PostProcessingError:
-        await event.edit("`There was an error during post processing.`")
+        await event.edit("`Ada kesalahan selama pemrosesan posting.`")
         return
     except UnavailableVideoError:
-        await event.edit("`Media is not available in the requested format.`")
+        await event.edit("`Media tidak tersedia dalam format yang diminta.`")
         return
     except XAttrMetadataError as XAME:
         await event.edit(f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
         return
     except ExtractorError:
-        await event.edit("`There was an error during info extraction.`")
+        await event.edit("`Terjadi kesalahan selama ekstraksi info.`")
         return
     except Exception as e:
         await event.edit(f"{str(type(e)): {str(e)}}")
@@ -100,9 +101,9 @@ async def download_video(event):
     except BaseException:
         pass
     upteload = """
-Uploading...
-Song name - {}
-By - {}
+Sedang Mengupload, Mohon Tunggu...
+Judul - {}
+Pencipta - {}
 """.format(
         rip_data["title"], rip_data["uploader"]
     )
@@ -111,7 +112,7 @@ By - {}
         event.chat_id,
         f"{rip_data['id']}.mp3",
         supports_streaming=True,
-        caption=f"⫸ Song - {rip_data['title']}\n⫸ By - {rip_data['uploader']}\n",
+        caption=f"❍ Judul - {rip_data['title']}\n❍ Pencipta - {rip_data['uploader']}\n",
         attributes=[
             DocumentAttributeAudio(
                 duration=int(rip_data["duration"]),
@@ -122,9 +123,12 @@ By - {}
     )
     os.remove(f"{rip_data['id']}.mp3")
 
+#For FromVT-Userbot
+#Piki Ganteng
+
 CMD_HELP.update(
     {
-        "asong": ">`.asong <Judul Lagu>`"
+        "songs": ">`.songs <Judul Lagu>`"
         "\nUsage: Mendownload Music"
     }
 )
