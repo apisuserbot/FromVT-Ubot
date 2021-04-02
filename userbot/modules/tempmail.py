@@ -7,7 +7,7 @@ import asyncio
 @register(outgoing=True, pattern="^.tempmail ?(.*)")
 async def demn(event):
     chat = "@TempMailBot"
-    await event.edit(ult, "Sedang Diprosess...")
+    await event.edit(event, "Sedang Diprosess...")
     async with bot.conversation(chat) as conv:
         try:
             response = conv.wait_event(events.NewMessage(
@@ -30,5 +30,5 @@ async def demn(event):
 # Alvin Gans
 CMD_HELP.update(
     {
-        "tempmail": "**Modules:** __Temp Mail__\n\n**Perintah:** `.tempmail Generate TempMail`"
+        "tempmail": "**Modules:** __Temp Mail__\n\n**Perintah:** `.tempmail`"
         "\n**Penjelasan:** Mendapatkan Email Gratis Dari Temp Mail"})
