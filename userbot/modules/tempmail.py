@@ -15,7 +15,7 @@ import asyncio
 @register(outgoing=True, pattern="^.tempmail ?(.*)")
 async def _(event):
     chat = "@TempMailBot"
-    from = await event.edit("Sedang Memprosess...")
+    lord = await event.edit("Sedang Memprosess...")
     async with bot.conversation(chat) as conv:
         try:
             response = conv.wait_event(events.NewMessage(
@@ -30,7 +30,7 @@ async def _(event):
             fromvt = ((response).reply_markup.rows[2].buttons[0].url)
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await from.edit("Mohon Unblock @TempMailBot !!!")
+            await lord.edit("Mohon Unblock @TempMailBot !!!")
             return
         await event.edit(f"**TEMPMAIL** ~ `{response.message.message}`\n\n[KLIK DISINI UNTUK MELIHAT VERIFIKASI]({link})")
 
