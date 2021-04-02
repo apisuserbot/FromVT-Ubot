@@ -26,7 +26,7 @@ async def demn(event):
         except YouBlockedUserError:
             await event.edit("Mohon Unblock @TempMailBot !!!")
             return
-        await event.edit(ult, f"TEMPMAIL ~ `{response.message.message}`\n\n[KLIK DISINI UNTUK MELIHAT VERIFIKASI]({link})")
+        await event.edit(f"TEMPMAIL ~ `{response.message.message}`\n\n[KLIK DISINI UNTUK MELIHAT VERIFIKASI]({link})")
 
 
 # Piki Gantengg
