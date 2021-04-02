@@ -9,7 +9,7 @@ import asyncio
 @register(outgoing=True, pattern="^.tempmail ?(.*)")
 async def demn(event):
     chat = "@TempMailBot"
-    await event.edit("Sedang Diprosess...")
+    await event.edit("Sedang Memprosess...")
     async with bot.conversation(chat) as conv:
         try:
             response = conv.wait_event(events.NewMessage(
@@ -26,7 +26,7 @@ async def demn(event):
         except YouBlockedUserError:
             await event.edit("Mohon Unblock @TempMailBot !!!")
             return
-        await event.edit(f"TEMPMAIL ~ `{response.message.message}`\n\n[KLIK DISINI UNTUK MELIHAT VERIFIKASI]({link})")
+        await event.edit("TEMPMAIL ~ `{response.message.message}`\n\n[KLIK DISINI UNTUK MELIHAT VERIFIKASI]({link})")
 
 
 # Piki Gantengg
