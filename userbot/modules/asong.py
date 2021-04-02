@@ -21,6 +21,7 @@ from youtube_dl.utils import (
 )
 from youtubesearchpython import SearchVideos
 
+from userbot.events import register
 from userbot import CMD_HELP
 
 
