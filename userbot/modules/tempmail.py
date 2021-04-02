@@ -1,4 +1,4 @@
-#pikiiii ganteng
+# pikiiii ganteng
 
 from userbot import bot, CMD_HELP
 from userbot.events import register
