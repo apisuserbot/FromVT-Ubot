@@ -24,7 +24,7 @@ from youtubesearchpython import SearchVideos
 from userbot import CMD_HELP
 
 
-@register(outgoing=True, pattern=r"^\.asong(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.asong (.*)")
 async def download_video(tele):
     await event.edit("Searching...")
     url = tele.pattern_match.group(1)
