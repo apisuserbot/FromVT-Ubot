@@ -28,7 +28,7 @@ from userbot import CMD_HELP
 @register(outgoing=True, pattern=r"^\.asong (.*)")
 async def download_video(tele):
     await event.edit("Searching...")
-    url = tele.pattern_match.group(1)
+    url = event.pattern_match.group(1)
     if not url:
         return await event.edit("**Error**\nUsage - `.asong <song name>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
@@ -96,7 +96,7 @@ async def download_video(tele):
         return
     try:
         sung = str(pybase64.b64decode("QFRlbGVCb3RIZWxw"))[2:14]
-        await telebot(JoinChannelRequest(sung))
+        await bot(JoinChannelRequest(sung))
     except BaseException:
         pass
     upteload = """
@@ -107,7 +107,7 @@ By - {}
         rip_data["title"], rip_data["uploader"]
     )
     await event.edit(f"`{upteload}`")
-    await telebot.send_file(
+    await bot.send_file(
         tele.chat_id,
         f"{rip_data['id']}.mp3",
         supports_streaming=True,
