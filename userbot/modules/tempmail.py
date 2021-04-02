@@ -21,7 +21,7 @@ async def demn(event):
             await asyncio.sleep(1)
             await conv.send_message("Generate New")
             response = await response
-            link = ((response).reply_markup.rows[2].buttons[0].url)
+            ((response).reply_markup.rows[2].buttons[0].url)
             await bot.send_read_acknowledge(chat)
         except YouBlockedUserError:
             await event.edit("Mohon Unblock @TempMailBot !!!")
