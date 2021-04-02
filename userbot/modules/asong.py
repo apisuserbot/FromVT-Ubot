@@ -123,8 +123,8 @@ Pencipta - {}
     )
     os.remove(f"{rip_data['id']}.mp3")
 
-#For FromVT-Userbot
-#Piki Ganteng
+# For FromVT-Userbot
+# Piki Ganteng
 
 CMD_HELP.update(
     {
