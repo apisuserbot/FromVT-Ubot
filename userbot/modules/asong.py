@@ -124,7 +124,7 @@ By - {}
 
 CMD_HELP.update(
     {
-        "getmusic": ">`.asong <Judul Lagu>`"
+        "asong": ">`.asong <Judul Lagu>`"
         "\nUsage: Mendownload Music"
     }
 )
