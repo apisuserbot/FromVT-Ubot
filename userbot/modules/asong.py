@@ -26,7 +26,7 @@ from userbot import CMD_HELP
 
 
 @register(outgoing=True, pattern=r"^\.asong (.*)")
-async def download_video(tele):
+async def download_video(event):
     await event.edit("Searching...")
     url = event.pattern_match.group(1)
     if not url:
@@ -108,7 +108,7 @@ By - {}
     )
     await event.edit(f"`{upteload}`")
     await bot.send_file(
-        tele.chat_id,
+        bot.chat_id,
         f"{rip_data['id']}.mp3",
         supports_streaming=True,
         caption=f"⫸ Song - {rip_data['title']}\n⫸ By - {rip_data['uploader']}\n",
