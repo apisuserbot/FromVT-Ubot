@@ -7,7 +7,7 @@ import asyncio
 @register(outgoing=True, pattern="^.tempmail ?(.*)")
 async def demn(event):
     chat = "@TempMailBot"
-    msg = await event.edit(ult, "Sedang Diprosess...")
+    await event.edit(ult, "Sedang Diprosess...")
     async with bot.conversation(chat) as conv:
         try:
             response = conv.wait_event(events.NewMessage(
