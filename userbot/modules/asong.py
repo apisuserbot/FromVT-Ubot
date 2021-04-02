@@ -1,5 +1,5 @@
-#Thanks To xditya
-#Port By @Vckyouuu
+# Thanks To xditya
+# Port By @Vckyouuu
 
 
 import json
@@ -21,12 +21,12 @@ from youtube_dl.utils import (
 )
 from youtubesearchpython import SearchVideos
 
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 
 
 @register(outgoing=True, pattern=r"^\.asong(?: |$)(.*)")
 async def download_video(tele):
-    x = await event.edit("Searching...")
+    await event.edit("Searching...")
     url = tele.pattern_match.group(1)
     if not url:
         return await event.edit("**Error**\nUsage - `.asong <song name>`")
