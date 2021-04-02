@@ -1,9 +1,10 @@
 # pikiiii ganteng
 
+from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot import bot, CMD_HELP
 from userbot.events import register
-from telethon.errors.rpcerrorlist import YouBlockedUserError
-import asyncio
+
+#piki
 
 
 @register(outgoing=True, pattern="^.tempmail ?(.*)")
