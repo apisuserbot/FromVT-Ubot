@@ -1,3 +1,5 @@
+#pikiiii ganteng
+
 from userbot import bot, CMD_HELP
 from userbot.events import register
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -7,7 +9,7 @@ import asyncio
 @register(outgoing=True, pattern="^.tempmail ?(.*)")
 async def demn(event):
     chat = "@TempMailBot"
-    await event.edit(event, "Sedang Diprosess...")
+    await event.edit("Sedang Diprosess...")
     async with bot.conversation(chat) as conv:
         try:
             response = conv.wait_event(events.NewMessage(
@@ -27,7 +29,7 @@ async def demn(event):
         await event.edit(ult, f"TEMPMAIL ~ `{response.message.message}`\n\n[KLIK DISINI UNTUK MELIHAT VERIFIKASI]({link})")
 
 
-# Alvin Gans
+# Piki Gantengg
 CMD_HELP.update(
     {
         "tempmail": "**Modules:** __Temp Mail__\n\n**Perintah:** `.tempmail`"
