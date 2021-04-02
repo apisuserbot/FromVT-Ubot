@@ -4,7 +4,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot import bot, CMD_HELP
 from userbot.events import register
 
-#piki
+# piki
 
 
 @register(outgoing=True, pattern="^.tempmail ?(.*)")
