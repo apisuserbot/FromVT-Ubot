@@ -6,7 +6,7 @@
 # <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 
-from userbot.functions.pmpermit_db import
+from userbot.functions.pmpermit_db import, bot
 from telethon import events
 from telethon.tl.functions.contacts import BlockRequest
 from telethon.tl.functions.messages import ReportSpamRequest
