@@ -6,7 +6,7 @@
 # <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 
-from userbot.functions.pmpermit_db import *
+from userbot.functions.pmpermit_db import
 from telethon import events
 from telethon.tl.functions.contacts import BlockRequest
 from telethon.tl.functions.messages import ReportSpamRequest
@@ -68,7 +68,7 @@ PMCMDS = [
 # =================================================================
 
 
-@bot.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
+@bot.on(events.NewMessage(incoming=True, func=lambda event: event.is_private))
 async def permitpm(event):
     user = await event.get_chat()
     if user.bot or user.is_self:
@@ -85,7 +85,7 @@ if sett is None:
     sett = True
 if sett == "True" and sett != "False":
 
-    @bot.on(events.NewMessage(outgoing=True, func=lambda e: e.is_private))
+    @bot.on(events.NewMessage(outgoing=True, func=lambda event: event.is_private))
     async def autoappr(event):
         miss = await event.get_chat()
         if miss.bot or miss.is_self or miss.verified or Redis(
@@ -107,7 +107,7 @@ if sett == "True" and sett != "False":
                 name0 = str(name.first_name)
                 await event.client.send_message(
                     Var.LOG_CHANNEL,
-                    f"#AutoApproved\nßecoz of outgoing msg\nUser - [{name0}](tg://user?id={e.chat_id})",
+                    f"#AutoApproved\nßecoz of outgoing msg\nUser - [{name0}](tg://user?id={event.chat_id})",
                 )
 
     @bot.on(events.NewMessage(incoming=True,
@@ -337,7 +337,7 @@ CMD_HELP.update(
     {
         "pmpermit": ">`.approve`"
         "\nUsage: Cek sendiri.\n"
-        ">`.butts`"
+        ">`.disapprove`"
         "\nUsage: Cek sendiri."
     }
 )
