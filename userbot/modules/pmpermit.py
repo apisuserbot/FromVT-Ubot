@@ -85,7 +85,8 @@ if sett is None:
     sett = True
 if sett == "True" and sett != "False":
 
-    @bot.on(events.NewMessage(outgoing=True, func=lambda event: event.is_private))
+    @bot.on(events.NewMessage(outgoing=True,
+                              func=lambda event: event.is_private))
     async def autoappr(event):
         miss = await event.get_chat()
         if miss.bot or miss.is_self or miss.verified or Redis(
