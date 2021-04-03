@@ -26,12 +26,12 @@ from userbot.events import register
 from userbot import CMD_HELP
 
 
-@register(outgoing=True, pattern=r"^\.songs (.*)")
+@register(outgoing=True, pattern=r"^\.song (.*)")
 async def download_video(event):
     await event.edit("Searching...")
     url = event.pattern_match.group(1)
     if not url:
-        return await event.edit("**Error**\nUsage - `.songs <song name>`")
+        return await event.edit("**Error**\nUsage - `.song <song name>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
     test = search.result()
     p = json.loads(test)
@@ -103,7 +103,7 @@ async def download_video(event):
     upteload = """
 Sedang Mengupload, Mohon Tunggu...
 Judul - {}
-Pencipta - {}
+Artis - {}
 """.format(
         rip_data["title"], rip_data["uploader"]
     )
@@ -128,7 +128,7 @@ Pencipta - {}
 
 CMD_HELP.update(
     {
-        "songs": ">`.songs <Judul Lagu>`"
+        "song": ">`.song <Judul Lagu>`"
         "\nUsage: Mendownload Music"
     }
 )
