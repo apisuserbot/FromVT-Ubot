@@ -40,7 +40,7 @@ def bruh(name):
     os.system("instantmusic -q -s " + name)
 
 
-@register(outgoing=True, pattern=r"^\.song (.*)")
+@register(outgoing=True, pattern=r"^\.songss (.*)")
 async def _(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
