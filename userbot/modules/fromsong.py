@@ -26,15 +26,15 @@ from userbot.events import register
 from userbot import CMD_HELP
 
 
-@register(outgoing=True, pattern=r"^\.song2 (.*)")
+@register(outgoing=True, pattern=r"^\.song (.*)")
 async def download_video(event):
     a = event.text
     if a[5] == "s":
         return
     await event.edit("Searching...")
-    url = ult.pattern_match.group(1)
+    url = event.pattern_match.group(1)
     if not url:
-        return await event.edit("**Error**\nUsage - `.song2 <song name>`")
+        return await event.edit("**Error**\nUsage - `.song <song name>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
     test = search.result()
     p = json.loads(test)
@@ -138,19 +138,19 @@ async def original(event):
     if not event.pattern_match.group(1):
         return await event.edit("give query to search.")
     noob = event.pattern_match.group(1)
-    ab = await event.edit("Getting lyrics..")
-    dc = random.randrange(1, 3)
-    if dc == 1:
+    event = await event.edit("Getting lyrics..")
+    vcky = random.randrange(1, 3)
+    if vcky == 1:
         fromvt = "AIzaSyAyDBsY3WRtB5YPC6aB_w8JAy6ZdXNc6FU"
-    if dc == 2:
+    if vcky == 2:
         fromvt = "AIzaSyBF0zxLlYlPMp9xwMQqVKCQRq8DgdrLXsg"
-    if dc == 3:
+    if vcky == 3:
         fromvt = "AIzaSyDdOKnwnPwVIQ_lbH5sYE4FoXjAKIQV0DQ"
     extract_lyrics = sl(f"{fromvt}", "15b9fb6193efd5d90")
     sh1vm = extract_lyrics.get_lyrics(f"{noob}")
-    a7ul = sh1vm["lyrics"]
+    a7ul = sh1vm["lirik"]
     await bot.send_message(event.chat_id, a7ul, reply_to=event.reply_to_msg_id)
-    await ab.delete()
+    await event.delete()
 
 # For FromVT-Userbot
 # Piki Ganteng
@@ -160,6 +160,6 @@ CMD_HELP.update(
         "song": ">`.song <Judul Lagu>`"
         "\nUsage: Mendownload Music"
         ">`.lirik` <Judul Lagu>`"
-        "\nUsage: `melihat lirik lagu`"
+        "\nUsage: `mendapatkan lirik lagu`"
     }
 )
