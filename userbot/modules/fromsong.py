@@ -162,7 +162,7 @@ CMD_HELP.update(
     {
         "song": ">`.song <Judul Lagu>`"
         "\nUsage: Mendownload Music"
-        ">`.lirik`" <Judul Lagu>`"
+        ">`.lirik`" < Judul Lagu >`"
         "\nUsage: melihat lyrics
     }
 )
