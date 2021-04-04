@@ -34,7 +34,7 @@ async def download_video(event):
     a = event.text
     if a[5] == "s":
         return
-   x = await event.edit("Searching...")
+    await event.edit("Searching...")
     url = event.pattern_match.group(1)
     if not url:
         return await event.edit("**Error**\nUsage - `.song <song name>`")
