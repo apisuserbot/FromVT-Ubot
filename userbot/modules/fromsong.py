@@ -111,7 +111,7 @@ By - {}
     await event.edit(f"`{upteload}`")
     CAPT = f"⫸ Song - {rip_data['title']}\n⫸ By - {rip_data['uploader']}\n"
     await bot.send_file(
-        bot.chat_id,
+        event.chat_id,
         f"{rip_data['id']}.mp3",
         thumb=thumb,
         supports_streaming=True,
@@ -136,7 +136,7 @@ By - {}
 async def original(event):
     if not event.pattern_match.group(1):
         return await event.edit("give query to search.")
-    noob = event.pattern_match.group(1)
+    vcky = event.pattern_match.group(1)
     event = await event.edit("Getting lyrics..")
     dc = random.randrange(1, 3)
     if dc == 1:
@@ -146,7 +146,7 @@ async def original(event):
     if dc == 3:
         fromvt = "AIzaSyDdOKnwnPwVIQ_lbH5sYE4FoXjAKIQV0DQ"
     extract_lyrics = sl(f"{fromvt}", "15b9fb6193efd5d90")
-    sh1vm = extract_lyrics.get_lyrics(f"{noob}")
+    sh1vm = extract_lyrics.get_lyrics(f"{vcky}")
     a7ul = sh1vm["lyrics"]
     await bot.send_message(event.chat_id, a7ul, reply_to=event.reply_to_msg_id)
     await event.delete()
