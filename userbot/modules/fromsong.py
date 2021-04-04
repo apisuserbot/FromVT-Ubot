@@ -8,10 +8,7 @@ import os
 import random
 
 from lyrics_extractor import SongLyrics as sl
-from telethon.errors.rpcerrorlist import UserAlreadyParticipantError
-from telethon.tl.functions.messages import ImportChatInviteRequest
 from telethon.tl.types import DocumentAttributeAudio
-from telethon.tl.types import InputMessagesFilterMusic as filtermus
 from youtube_dl import YoutubeDL
 from youtube_dl.utils import (
     ContentTooShortError,
@@ -34,7 +31,7 @@ async def download_video(event):
     a = event.text
     if a[5] == "s":
         return
-    x = await event.edit("Searching...")
+    await event.edit("Searching...")
     url = ult.pattern_match.group(1)
     if not url:
         return await event.edit("**Error**\nUsage - `.song2 <song name>`")
