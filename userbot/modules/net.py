@@ -1,12 +1,9 @@
-Port By : Piki Ganteng
-
-import random
-
-from plugins.stickertools import deEmojify
-from telethon.errors import ChatSendInlineForbiddenError, ChatSendStickersForbiddenError
-
-from userbot.events import register
 from userbot import CMD_HELP
+from userbot.events import register
+from telethon.errors import ChatSendInlineForbiddenError, ChatSendStickersForbiddenError
+from plugins.stickertools import deEmojify
+import random
+Port By: Piki Ganteng
 
 
 @register(outgoing=True, pattern=r"^\.net (.*)")
@@ -18,7 +15,7 @@ async def nope(fromvt):
             (await fromvt.get_reply_message()).message
         else:
             return await event.edit("`Sir please give some query to search and download it for you..!`",
-            )
+                                    )
     sticcers = await bot.inline_query("Lybot", f"{(deEmojify(vt))}")
     try:
         await sticcers[0].click(
