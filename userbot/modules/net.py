@@ -1,8 +1,7 @@
 # Port By: Piki Ganteng
 
-from telethon.errors import ChatSendInlineForbiddenError, ChatSendStickersForbiddenError
+from telethon.errors import ChatSendInlineForbiddenError
 from plugins.stickertools import deEmojify
-import random
 
 from userbot import CMD_HELP
 from userbot.events import register
@@ -11,7 +10,7 @@ from userbot.events import register
 @register(outgoing=True, pattern=r"^\.net (.*)")
 async def nope(fromvt):
     vt = fromvt.pattern_match.group(1)
-    a = await event.edit("`Processing...`")
+    await event.edit("`Processing...`")
     if not vt:
         if fromvt.is_reply:
             (await fromvt.get_reply_message()).message
