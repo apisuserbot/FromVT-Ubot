@@ -8,7 +8,10 @@ import os
 import random
 
 from lyrics_extractor import SongLyrics as sl
+from telethon.errors.rpcerrorlist import UserAlreadyParticipantError
+from telethon.tl.functions.messages import ImportChatInviteRequest
 from telethon.tl.types import DocumentAttributeAudio
+from telethon.tl.types import InputMessagesFilterMusic as filtermus
 from youtube_dl import YoutubeDL
 from youtube_dl.utils import (
     ContentTooShortError,
@@ -75,8 +78,7 @@ async def download_video(event):
         await event.edit("`The download content was too short.`")
         return
     except GeoRestrictedError:
-        await event.edit(
-            "`Video is not available from your geographic location due to"
+        await event.edit("`Video is not available from your geographic location due to"
             + " geographic restrictions imposed by a website.`"
         )
         return
