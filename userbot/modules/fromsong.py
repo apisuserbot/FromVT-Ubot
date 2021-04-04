@@ -31,7 +31,7 @@ async def download_video(event):
     a = event.text
     if a[5] == "s":
         return
-    await event.edit("Searching...")
+   x = await event.edit("Searching...")
     url = event.pattern_match.group(1)
     if not url:
         return await event.edit("**Error**\nUsage - `.song <song name>`")
@@ -112,7 +112,7 @@ By - {}
     await event.edit(f"`{upteload}`")
     CAPT = f"⫸ Song - {rip_data['title']}\n⫸ By - {rip_data['uploader']}\n"
     await bot.send_file(
-        event.chat_id,
+        bot.chat_id,
         f"{rip_data['id']}.mp3",
         thumb=thumb,
         supports_streaming=True,
@@ -139,16 +139,16 @@ async def original(event):
         return await event.edit("give query to search.")
     noob = event.pattern_match.group(1)
     event = await event.edit("Getting lyrics..")
-    vcky = random.randrange(1, 3)
-    if vcky == 1:
+    dc = random.randrange(1, 3)
+    if dc == 1:
         fromvt = "AIzaSyAyDBsY3WRtB5YPC6aB_w8JAy6ZdXNc6FU"
-    if vcky == 2:
+    if dc == 2:
         fromvt = "AIzaSyBF0zxLlYlPMp9xwMQqVKCQRq8DgdrLXsg"
-    if vcky == 3:
+    if dc == 3:
         fromvt = "AIzaSyDdOKnwnPwVIQ_lbH5sYE4FoXjAKIQV0DQ"
     extract_lyrics = sl(f"{fromvt}", "15b9fb6193efd5d90")
     sh1vm = extract_lyrics.get_lyrics(f"{noob}")
-    a7ul = sh1vm["lirik"]
+    a7ul = sh1vm["lyrics"]
     await bot.send_message(event.chat_id, a7ul, reply_to=event.reply_to_msg_id)
     await event.delete()
 
