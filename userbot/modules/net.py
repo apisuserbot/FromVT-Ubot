@@ -1,9 +1,11 @@
-from userbot import CMD_HELP
-from userbot.events import register
+# Port By: Piki Ganteng
+
 from telethon.errors import ChatSendInlineForbiddenError, ChatSendStickersForbiddenError
 from plugins.stickertools import deEmojify
 import random
-Port By: Piki Ganteng
+
+from userbot import CMD_HELP
+from userbot.events import register
 
 
 @register(outgoing=True, pattern=r"^\.net (.*)")
