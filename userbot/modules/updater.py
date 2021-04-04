@@ -144,7 +144,7 @@ async def upstream(event):
     off_repo = UPSTREAM_REPO_URL
     force_update = False
     try:
-        txt = "`Maaf Lord Pembaruan Tidak Dapat Di Lanjutkan Karna "
+        txt = "`Maaf Pembaruan Tidak Dapat Di Lanjutkan Karna "
         txt += "Beberapa Masalah Terjadi`\n\n**LOGTRACE:**\n"
         repo = Repo()
     except NoSuchPathError as error:
@@ -208,7 +208,7 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('**Perintah Untuk Update 𝙁𝙧𝙤𝙢𝙑𝙏-𝙐𝙨𝙚𝙧𝘽𝙤𝙩**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari Lord Userbot.__')
+        return await event.respond('**Perintah Untuk Update 𝙁𝙧𝙤𝙢𝙑𝙏-𝙐𝙨𝙚𝙧𝘽𝙤𝙩**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari 𝙁𝙧𝙤𝙢𝙑𝙏-𝙐𝙨𝙚𝙧𝘽𝙤𝙩.__')
 
     if force_update:
         await event.edit(
@@ -219,7 +219,7 @@ async def upstream(event):
         await event.edit('`👑 Proses Update 𝙁𝙧𝙤𝙢𝙑𝙏-𝙐𝙨𝙚𝙧𝘽𝙤𝙩, Loading....35%`')
         await event.edit('`👑 Proses Update 𝙁𝙧𝙤𝙢𝙑𝙏-𝙐𝙨𝙚𝙧𝘽𝙤𝙩, Loading....77%`')
         await event.edit('`👑 Proses Update 𝙁𝙧𝙤𝙢𝙑𝙏-𝙐𝙨𝙚𝙧𝘽𝙤𝙩, Updating...90%`')
-        await event.edit('`👑 Proses Update 𝙁𝙧𝙤𝙢𝙑𝙏-𝙐𝙨𝙚𝙧𝘽𝙤𝙩, Mohon Menunggu Lord....100%`')
+        await event.edit('`👑 Proses Update 𝙁𝙧𝙤𝙢𝙑𝙏-𝙐𝙨𝙚𝙧𝘽𝙤𝙩, Mohon Menunggu....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
