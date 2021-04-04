@@ -136,7 +136,7 @@ By - {}
         pass
 
 
-@register(outgoing=True, pattern=r"^\.lyrics (.*)")
+@register(outgoing=True, pattern=r"^\.lirik (.*)")
 async def original(event):
     if not event.pattern_match.group(1):
         return await event.edit("give query to search.")
@@ -162,7 +162,7 @@ CMD_HELP.update(
     {
         "song": ">`.song <Judul Lagu>`"
         "\nUsage: Mendownload Music"
-        "lyrics": ">`.lyrics <Judul Lagu>`"
+        ">`.lirik`" <Judul Lagu>`"
         "\nUsage: melihat lyrics
     }
 )
