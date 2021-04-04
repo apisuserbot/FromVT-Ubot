@@ -31,7 +31,7 @@ async def download_video(event):
     a = event.text
     if a[5] == "s":
         return
-    await event.edit("Searching...")
+   event = await event.edit("Searching...")
     url = event.pattern_match.group(1)
     if not url:
         return await event.edit("**Error**\nUsage - `.song <song name>`")
@@ -110,7 +110,7 @@ By - {}
     )
     await event.edit(f"`{upteload}`")
     CAPT = f"⫸ Song - {rip_data['title']}\n⫸ By - {rip_data['uploader']}\n"
-    await bot.send_file(
+    await event.client.send_file(
         event.chat_id,
         f"{rip_data['id']}.mp3",
         thumb=thumb,
