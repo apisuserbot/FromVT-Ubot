@@ -1,7 +1,6 @@
 # Port By: Piki Ganteng
 
 from telethon.errors import ChatSendInlineForbiddenError
-from telethon.stickertools import deEmojify
 
 from userbot import CMD_HELP
 from userbot.events import register
