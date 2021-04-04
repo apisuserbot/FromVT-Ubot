@@ -21,8 +21,8 @@ async def nope(fromvt):
     try:
         await sticcers[0].click(
             fromvt.chat_id,
-            reply_to=doit.reply_to_msg_id,
-            silent=True if doit.is_reply else False,
+            reply_to=fromvt.reply_to_msg_id,
+            silent=True if fromvt.is_reply else False,
             hide_via=True,
         )
         await event.delete()
