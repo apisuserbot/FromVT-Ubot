@@ -16,7 +16,7 @@ from userbot import CMD_HELP
 async def _(event):
     if event.fwd_from:
         return
-    input_str = event.pattern_match.group(1)
+    input_str = event.pattern_match.group(1).lower()
     peer_id = event.chat_id
     reply = await event.get_reply_message()
     if not event.is_group:
@@ -215,7 +215,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    input_str = event.pattern_match.group(1)
+    input_str = event.pattern_match.group(1).lower()
     peer_id = event.chat_id
     reply = await event.get_reply_message()
     if not event.is_group:
