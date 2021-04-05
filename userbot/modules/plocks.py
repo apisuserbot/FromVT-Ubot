@@ -8,6 +8,7 @@ from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import ChatBannedRights
 
+from ..utils import is_admin
 from userbot.events import register
 from userbot import CMD_HELP
 
