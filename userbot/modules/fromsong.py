@@ -148,7 +148,7 @@ async def original(event):
     extract_lyrics = sl(f"{fromvt}", "15b9fb6193efd5d90")
     sh1vm = extract_lyrics.get_lyrics(f"{vcky}")
     a7ul = sh1vm["lyrics"]
-    await bot.send_message(event.chat_id, a7ul, reply_to=event.reply_to_msg_id)
+    await event.client.send_message(event.chat_id, a7ul, reply_to=event.reply_to_msg_id)
     await event.delete()
 
 # For FromVT-Userbot
