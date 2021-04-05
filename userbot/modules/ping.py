@@ -77,7 +77,7 @@ async def pingme(pong):
                     f"`{uptime}` \n" % (duration))
 
 
-@register(outgoing=True, pattern="^.ping$")
+@register(outgoing=True, pattern="^.xping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
@@ -93,14 +93,14 @@ async def pingme(pong):
     await pong.edit("**PING!!!**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**═════════════════**\n"
-                    f"       **⚠️ 𝙁 𝙍 𝙊 𝙈 - 𝙑 𝙏 ⚠️**\n"
-                    f"**═════════════════**\n"
-                    f"**❖ ᴘɪɴɢ   :** "
+    await pong.edit(f"**┉┈────┉┈──┈┉────┈┉**\n"
+                    f"**⚡ 𝙁𝙍𝙊𝙈-𝙑𝙏 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⚡**\n"
+                    f"**┉┈────┉┈──┈┉────┈┉**\n"
+                    f"**▸ ᴘᴏɴɢ    :** "
                     f"`%sms` \n"
-                    f"**• ᴏɴʟɪɴᴇ  :** "
+                    f"**▸ ᴏɴʟɪɴᴇ  :** "
                     f"`{uptime}` \n"
-                    f"**• ᴏᴡɴᴇʀ  :** `{ALIVE_NAME}`" % (duration))
+                    f"**▸ ᴏᴡɴᴇʀ  :** `{ALIVE_NAME}`" % (duration))
 
 
 # Copyright (C) 2019 The Raphielscape Company LLC.
@@ -139,29 +139,29 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@register(outgoing=True, pattern="^.xping$")
+@register(outgoing=True, pattern="^.ping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("⚠️ 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
-    await pong.edit(" ⚠️𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
-    await pong.edit(" 𝙁⚠️𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
-    await pong.edit(" 𝙁𝙍⚠️𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
-    await pong.edit(" 𝙁𝙍𝙊⚠️-𝙑𝙏 𝘽𝙊𝙏**!**")
-    await pong.edit(" 𝙁𝙍𝙊𝙈⚠️𝙑𝙏 𝘽𝙊𝙏**!**")
-    await pong.edit(" 𝙁𝙍𝙊𝙈-⚠️𝙏 𝘽𝙊𝙏**!**")
-    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑⚠️ 𝘽𝙊𝙏**!**")
-    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏⚠️𝘽𝙊𝙏**!**")
-    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 ⚠️𝙊𝙏**!**")
-    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽⚠️𝙏**!**")
-    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊⚠️")
-    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏⚠️")
-    await pong.edit("**𝙁𝙍𝙊𝙈-𝙑𝙏 𝙋𝙄𝙉𝙂!⚠️**")
+    await pong.edit("⚡ 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
+    await pong.edit(" ⚡𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁⚡𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍⚡𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊⚡-𝙑𝙏 𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊𝙈⚡𝙑𝙏 𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊𝙈-⚡𝙏 𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑⚡ 𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏⚡𝘽𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 ⚡𝙊𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽⚡𝙏**!**")
+    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊⚡!")
+    await pong.edit(" 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏⚡")
+    await pong.edit("**𝙁𝙍𝙊𝙈-𝙑𝙏 𝙋𝙄𝙉𝙂!⚡**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**⚠️𝙁𝙍𝙊𝙈-𝙑𝙏⚠️** \n"
-                    f"━━━━━━━━━━━━━━\n"
+    await pong.edit(f"**⚡𝙁𝙍𝙊𝙈-𝙑𝙏 𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
+                    f"┉┈────┉┈──┈┉────┈┉\n"
                     f"➥ **Sinyal  :**"
                     f" %sms \n"
                     f"➥ **Owner :**"
