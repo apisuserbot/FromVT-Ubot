@@ -64,7 +64,7 @@ pip>=19.2.3
 setuptools>=28.8.0
 selenium>=3.141.0 
 telegraph
-si_admin
+is_admin
 python-dateutil
 pyfiglet   
 jotquote
