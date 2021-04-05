@@ -20,7 +20,7 @@ async def nope(event):
     try:
         await sticcers[0].click(
             event.chat_id,
-            reply_to=fromvt.reply_to_msg_id,
+            reply_to=event.reply_to_msg_id,
             silent=True if event.is_reply else False,
             hide_via=True,
         )
