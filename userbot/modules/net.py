@@ -16,9 +16,9 @@ async def nope(event):
         else:
             return await event.edit("`Sir please give some query to search and download it for you..!`",
                                     )
-    sticcers = await bot.inline_query("Lybot", f"{(deEmojify(vt))}")
+    fromvt = await event.client.inline_query("Lybot", f"{(deEmojify(vt))}")
     try:
-        await sticcers[0].click(
+        await fromvt[0].click(
             event.chat_id,
             reply_to=event.reply_to_msg_id,
             silent=True if event.is_reply else False,
