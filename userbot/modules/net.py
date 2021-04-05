@@ -11,7 +11,7 @@ async def nope(event):
     vt = event.pattern_match.group(1)
     await event.edit("`Processing...`")
     if not vt:
-        if fromvt.is_reply:
+        if event.is_reply:
             (await event.get_reply_message()).message
         else:
             return await event.edit("`Sir please give some query to search and download it for you..!`",
