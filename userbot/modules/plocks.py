@@ -206,7 +206,7 @@ async def _(event):
         await event.client(EditBannedRequest(peer_id, reply.from_id, lock_rights))
         await event.edit_or_reply(f"`Locked {locktype} for this user !!`")
     except BaseException as e:
-        await event.edit_deletef"`Do I have proper rights for that ??`\n\n**Error:** `{str(e)}`",
+        await event.edit_delete(f"`Do I have proper rights for that ??`\n\n**Error:** `{str(e)}`",
                          time = 5,
                          )
 
