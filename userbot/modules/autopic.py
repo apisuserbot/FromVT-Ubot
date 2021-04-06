@@ -10,7 +10,7 @@ from telethon import functions
 from userbot.events import register
 
 
-@register(outgoing=True, pattern="^.newbot ?(.*)")
+@register(outgoing=True, pattern="^.apic ?(.*)")
 async def autopic(event):
     search = event.pattern_match.group(1)
     if not search:
@@ -37,10 +37,21 @@ async def autopic(event):
         await asyncio.sleep(1100)
 
 
-@ultroid_cmd(pattern="stoppic$")
+@register(outgoing=True, pattern="^.spic ?(.*)")
 async def stoppo(event):
     gt = udB.get("AUTOPIC")
     if not gt == "True":
         return await event.edit("`AUTOPIC was not in used !!`")
     udB.set("AUTOPIC", "None")
     await event.edit("`AUTOPIC Stopped !!`")
+
+# Kalian semua kontol
+
+CMD_HELP.update(
+    {
+        "song": ">`.song <Judul Lagu>`"
+        "\nUsage: Mendownload Music"
+        ">`.lirik` <Judul Lagu>`"
+        "\nUsage: `mendapatkan lirik lagu`"
+    }
+)
