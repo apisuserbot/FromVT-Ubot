@@ -143,6 +143,32 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     await get_readable_time((time.time() - StartTime))
     start = datetime.now()
+    await pong.edit(".                       /¯ )")
+    await pong.edit(".                       /¯ )\n                      /¯  /")
+    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /")
+    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸")
+    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ ")
+    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')")
+    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /")
+    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´")
+    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´\n            \\              (")
+    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´\n            \\              (\n              \\  ")
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
+    await pong.edit(f"**⚡ 𝙁𝙍𝙊𝙈-𝙑𝙏 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⚡**\n"
+                    f"**┉┈────┉┈─┈┉────┈┉**\n"
+                    f"**▸ ᴘᴏɴɢ     :** "
+                    f"`%sms` \n"
+                    f"**▸ ᴏɴʟɪɴᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"**▸ ᴏᴡɴᴇʀ  :** `{ALIVE_NAME}`" % (duration))
+
+
+@register(outgoing=True, pattern="^.from$")
+async def pingme(pong):
+    """ For .ping command, ping the userbot from any chat.  """
+    await get_readable_time((time.time() - StartTime))
+    start = datetime.now()
     await pong.edit("⚡ 𝙁𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
     await pong.edit(" ⚡𝙍𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
     await pong.edit(" 𝙁⚡𝙊𝙈-𝙑𝙏 𝘽𝙊𝙏**!**")
@@ -160,7 +186,7 @@ async def pingme(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**⚡𝙁𝙍𝙊𝙈-𝙑𝙏 𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
-                    f"┉┈────┉┈──┈┉────┈┉\n"
+                    f"┉┈────┉┈─┈┉────┈┉\n"
                     f"➥ **Sinyal  :**"
                     f" %sms \n"
                     f"➥ **Owner :**"
