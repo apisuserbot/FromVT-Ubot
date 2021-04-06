@@ -1,5 +1,5 @@
 # wahahaha
-#port by @Vckyouuu
+# port by @Vckyouuu
 
 import asyncio
 import os
@@ -8,7 +8,6 @@ import random
 from telethon import functions
 
 from userbot.events import register
-from userbot import CMD_HELP
 
 
 @register(outgoing=True, pattern="^.newbot ?(.*)")
