@@ -49,9 +49,9 @@ async def stoppo(event):
 
 CMD_HELP.update(
     {
-        "song": ">`.song <Judul Lagu>`"
+        "autopic": ">`.apic <Judul Lagu>`"
         "\nUsage: Mendownload Music"
-        ">`.lirik` <Judul Lagu>`"
+        "\n>`.spic` <Judul Lagu>`"
         "\nUsage: `mendapatkan lirik lagu`"
     }
 )
