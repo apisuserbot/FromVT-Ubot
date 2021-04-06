@@ -41,20 +41,6 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@register(outgoing=True, pattern="^.lping$")
-async def pingme(pong):
-    """ For .ping command, ping the userbot from any chat.  """
-    uptime = await get_readable_time((time.time() - StartTime))
-    start = datetime.now()
-    await pong.edit("`Love Ping..............`")
-    end = datetime.now()
-    duration = (end - start).microseconds / 1000
-    await pong.edit(f"**✣ PONG!**\n"
-                    f"❦ **Ping:** "
-                    f"`%sms` \n"
-                    f"❦ **Uptime:** "
-                    f"`{uptime}` \n" % (duration))
-
 
 @register(outgoing=True, pattern="^.zping$")
 async def pingme(pong):
@@ -138,26 +124,23 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@register(outgoing=True, pattern="^.fvck$")
+@@register(outgoing=True, pattern="^.ping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
-    await get_readable_time((time.time() - StartTime))
+    uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit(".                       /¯ )")
-    await pong.edit(".                       /¯ )\n                      /¯  /")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ ")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´\n            \\              (")
-    await pong.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´\n            \\              (\n              \\  ")
+    await pong.edit("**0% ▒▒▒▒▒▒▒▒▒▒**")
+    await pong.edit("**10% █▒▒▒▒▒▒▒▒▒**")
+    await pong.edit("**20% ██▒▒▒▒▒▒▒▒**")
+    await pong.edit("**40% ████▒▒▒▒▒▒**")
+    await pong.edit("**60% ██████▒▒▒▒**")
+    await pong.edit("**80% ████████▒▒**")
+    await pong.edit("**100% ██████████**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**⚡𝙁𝙍𝙊𝙈-𝙑𝙏 𝙋𝙄𝙉𝙂⚡** \n"
+    await pong.edit(f"**⚡𝗙𝗥𝗢𝗠-𝗩𝗧 𝗣𝗜𝗡𝗚⚡** \n"
                     f"╭┈──────────── \n"
-                    f"**▸ ᴘᴏɴɢ   :**"
+                    f"**▸ ᴘᴏɴɢ     :**"
                     f" %sms \n"
                     f"**▸ ᴏɴʟɪɴᴇ  :** "
                     f"`{uptime}` \n"
@@ -328,7 +311,7 @@ async def pingme(pong):
     await pong.edit("🦚 **ᴘᴏɴɢ!**\n`%sms`" % (duration))
 
 CMD_HELP.update(
-    {"ping": "`.ping` ; `.spong` ; `.from` ; `.lping` ; `.xping` ; `.sping`\
+    {"ping": "`.ping` ; `.spong` ; `.from` ; `.xping` ; `.sping`\
     \nUsage: Untuk menunjukkan ping bot.\
     \n\n`.speed`\
     \nUsage: Untuk menunjukkan kecepatan.\
