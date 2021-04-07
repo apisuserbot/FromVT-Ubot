@@ -11,20 +11,20 @@ from userbot.events import register
 
 
 @register(outgoing=True, pattern="^.apic ?(.*)")
-async def autopic(event):
-    search = event.pattern_match.group(1)
+async def autopic(e):
+    search = e.pattern_match.group(1)
     if not search:
-        return await event.edit(get_string("autopic_1"))
+        return await e.edit(get_string("autopic_1"))
     clls = returnpage(search)
     if len(clls) == 0:
-        return await event.edit(get_string("autopic_2").format(search))
+        return await e.edit(get_string("autopic_2").format(search))
     if not len(clls) == 1:
         num = random.randrange(0, len(clls) - 1)
     else:
         num = 0
     page = clls[num]
     title = page["title"]
-    await event.edit(get_string("autopic_3").format(title))
+    await e.edit(get_string("autopic_3").format(title))
     udB.set("AUTOPIC", "True")
     while True:
         ge = udB.get("AUTOPIC")
@@ -38,20 +38,20 @@ async def autopic(event):
 
 
 @register(outgoing=True, pattern="^.spic ?(.*)")
-async def stoppo(event):
+async def stoppo(e):
     gt = udB.get("AUTOPIC")
     if not gt == "True":
-        return await event.edit("`AUTOPIC was not in used !!`")
+        return await e.edit("`AUTOPIC was not in used !!`")
     udB.set("AUTOPIC", "None")
-    await event.edit("`AUTOPIC Stopped !!`")
+    await e.edit("`AUTOPIC Stopped !!`")
 
 # Kalian semua kontol
 
 CMD_HELP.update(
     {
-        "autopic": ">`.apic <Judul Lagu>`"
-        "\nUsage: Mendownload Music"
-        "\n>`.spic` <Judul Lagu>`"
-        "\nUsage: `mendapatkan lirik lagu`"
+        "autopic": ">`.apic`"
+        "\nUsage: AutoPic"
+        "\n>`.spic``"
+        "\nUsage: `Stop AutoPic`"
     }
 )
